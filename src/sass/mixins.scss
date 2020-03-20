@@ -9,7 +9,7 @@
   list-style: none;
 }
 
-@mixin d-flex ($wrap: nowrap, $direction: row, $justify: flex-start, $align: center) {
+@mixin dflex ($wrap: nowrap, $direction: row, $justify: flex-start, $align: center) {
   display: flex;
   flex-wrap: $wrap;
   flex-direction: $direction;

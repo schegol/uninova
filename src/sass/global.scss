@@ -8,9 +8,9 @@ body {
   overflow-x: hidden;
   font-weight: normal;
   font-size: 14px;
-  line-height: 1.4;
+  line-height: 100%;
   font-family: "TT Norms", "Arial", sans-serif;
-  color: #000;
+  color: $text-color;
   background-color: #fff;
 }
 
@@ -44,11 +44,6 @@ a {
   clip: rect(0 0 0 0);
 }
 
-.container {
-  max-width: 100%;
-  padding-right: 0;
-  padding-left: 0;
-}
 /*
 @media (min-width: $tablet-width) {
   .container {
