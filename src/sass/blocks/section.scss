@@ -1,0 +1,13 @@
+.section {
+  padding-top: 80px;
+  padding-bottom: 65px;
+  border-bottom: 1px solid #eeeeff;
+}
+
+.section__heading {
+  @include reset;
+  margin-bottom: 40px;
+  font-size: 34px;
+  line-height: 34px;
+  font-weight: 500;
+}

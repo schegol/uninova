@@ -1,0 +1,21 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: $main-color;
+  border: none;
+
+  &:hover,
+  &:focus {
+    background-color: $extra-color;
+  }
+
+  &:active {
+
+  }
+}

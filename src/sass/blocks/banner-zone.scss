@@ -1,0 +1,37 @@
+.banner-zone {
+  background-image: url("../img/bg-banner-big.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &--index {
+    min-height: 600px;
+    padding-top: 120px;
+    padding-bottom: 80px;
+
+    & .btn {
+      padding: 0 33px;
+    }
+  }
+}
+
+.banner-zone__content {
+  @include dflex(nowrap, row, space-between, center);
+}
+
+.banner-zone__text-container {
+  @include dflex(nowrap, column, flex-start, flex-start);
+  flex-basis: 330px;
+}
+
+.banner-zone__heading {
+  @include reset;
+  margin-bottom: 20px;
+}
+
+.banner-zone__description {
+  @include reset;
+  margin-bottom: 25px;
+  font-size: 18px;
+  line-height: 22px;
+}
