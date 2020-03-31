@@ -1,4 +1,5 @@
 .btn {
+  @include transition();
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,7 +16,16 @@
     background-color: $extra-color;
   }
 
-  &:active {
+  &--alternative {
+      color: $main-color;
+      background-color: #fff;
+      font-weight: 500;
+      border: 1px solid $main-color;
 
+      &:hover,
+      &:focus {
+        color: #fff;
+        background-color: $main-color;
+      }
   }
 }

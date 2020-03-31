@@ -1,0 +1,9 @@
+.link {
+  @include transition(color);
+  color: $text-color;
+
+  &:hover,
+  &:focus {
+    color: $text-hovered;
+  }
+}

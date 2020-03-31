@@ -35,3 +35,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin transition ($prop: all) {
+  transition: $prop .2s linear;
+}
