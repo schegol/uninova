@@ -54,3 +54,66 @@
     color: $text-hovered;
   }
 }
+
+@media (max-width: $notebook-width) {
+  .about-clinic__speciality {
+    flex-basis: 300px;
+  }
+
+  .about-clinic__speciality-img {
+    width: 300px;
+    object-fit: cover;
+  }
+
+  .about-clinic__speciality-heading {
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  .about-clinic__speciality-link {
+    font-size: 16px;
+    line-height: 32px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .about-clinic__speciality {
+    flex-basis: 235px;
+  }
+
+  .about-clinic__speciality-img {
+    width: 235px;
+    margin-bottom: 25px;
+  }
+
+  .about-clinic__speciality-heading {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .about-clinic__content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .about-clinic__speciality {
+    flex-basis: 100%;
+    margin-bottom: 25px;
+  }
+
+  .about-clinic__speciality-img {
+    width: 100%;
+    max-height: 360px;
+  }
+
+  .about-clinic__speciality-heading {
+    padding-left: 0;
+  }
+
+  .about-clinic__speciality-list {
+    padding-left: 0;
+  }
+}

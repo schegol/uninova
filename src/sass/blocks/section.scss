@@ -11,3 +11,29 @@
   line-height: 34px;
   font-weight: 500;
 }
+
+@media (max-width: $tablet-width) {
+  .section {
+    padding-top: 55px;
+    padding-bottom: 40px;
+  }
+
+  .section__heading {
+    margin-bottom: 25px;
+    font-size: 28px;
+    line-height: 28px;
+  }
+}
+
+@media (max-width: $xs-mobile-width) {
+  .section {
+    padding-top: 30px;
+    padding-bottom: 25px;
+  }
+
+  .section__heading {
+    margin-bottom: 20px;
+    font-size: 25px;
+    line-height: 25px;
+  }
+}
