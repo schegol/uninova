@@ -54,3 +54,39 @@
   font-size: 17px;
   z-index: 1;
 }
+
+@media (max-width: $notebook-width) {
+  .top-appointment__form-select {
+    background-position: right 25px center;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .top-appointment__select-label {
+    left: 20px;
+  }
+
+  .top-appointment__form-select {
+    padding-left: 15px;
+    font-size: 16px;
+    background-position: right 15px center;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .top-appointment {
+    height: 240px;
+  }
+
+  .top-appointment__form {
+    flex-wrap: wrap;
+  }
+
+  .top-appointment__select-nest {
+    flex-basis: 50%;
+  }
+
+  .top-appointment__form-submit {
+    flex-basis: 100%;
+  }
+}

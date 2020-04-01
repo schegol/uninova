@@ -1,5 +1,7 @@
 .header {
   @include dflex(nowrap, column, flex-start, stretch);
+  position: relative;
+  z-index: 1;
 }
 
 .header__top-container {
@@ -155,10 +157,14 @@
   }
 }
 
+.header__menu-toggle {
+  display: none;
+}
+
 .header__submenu-block {
   padding-top: 50px;
   padding-bottom: 50px;
-  box-shadow: 0 4px 4px rgba(0,0,0,.25);
+  box-shadow: 0 10px 80px rgba(#00003E,.05);
 }
 
 .header__submenu-heading {
@@ -236,4 +242,117 @@
 
 .header__submenu-item--parent .header__submenu-link {
   margin-bottom: 25px;
+}
+
+@media (max-width: $notebook-width) {
+  .header__small-menu {
+    margin-right: 60px;
+  }
+
+  .header__small-menu-item {
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+
+  .header__address {
+    max-width: 160px;
+    line-height: 125%;
+  }
+
+  .header__social-item {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  .header__menu-item {
+     &:not(:last-child) {
+       margin-right: 25px;
+     }
+  }
+
+  .header__menu-link {
+    padding-right: 25px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .header__small-menu {
+    display: none;
+  }
+
+  .header__address {
+    max-width: none;
+    margin-right: 20px;
+    padding-left: 25px;
+  }
+
+  .header__phone {
+    margin-right: 20px;
+    padding-left: 25px;
+  }
+
+  .header__menu {
+    display: none;
+  }
+
+  .header__menu-toggle {
+    display: block;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    & path {
+      @include transition(fill);
+      fill: $main-color;
+    }
+
+    &:hover,
+    &:focus {
+      & path {
+        fill: $extra-color;
+      }
+    }
+
+    // &--open {
+    //   border: 1px solid $main-color;
+    //
+    //   & path {
+    //     fill: #fff;
+    //   }
+    // }
+  }
+}
+
+@media (max-width: $mobile-width) {
+
+}
+
+@media (max-width: $xs-mobile-width) {
+  .header__top-container {
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .header__social-list {
+    display: none;
+  }
+
+  .header__address {
+    max-width: 140px;
+    margin-right: 0;
+    padding-left: 22px;
+  }
+
+  .header__phone {
+    margin-right: 0;
+    padding-left: 22px;
+  }
+  
+  .header__logo {
+    width: 250px;
+  }
 }
