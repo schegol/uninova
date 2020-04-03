@@ -9,7 +9,7 @@
   <title>Uninova</title>
 </head>
 <body>
-  <header class="header header--index">
+  <header class="header">
     <div class="header__visible-part">
       <div class="header__top-row">
         <div class="header__top-container container">
@@ -78,6 +78,7 @@
               <a class="link header__menu-link header__menu-link--research" href="#">Клинические исследования</a>
             </li>
           </ul>
+          <a class="header__appointment-btn btn" href="contacts.html">Записаться</a>
           <button class="header__menu-toggle" type="button"></button>
           <nav class="header__submenu-block">
             <div class="header__submenu-container container">
@@ -176,201 +177,44 @@
     </div>
   </header>
   <main class="main">
-    <section class="top-appointment">
-      <h2 class="visually-hidden">Записаться на прием</h2>
-      <div class="container">
-        <form class="top-appointment__form" action="" method="post">
-          <div class="top-appointment__select-nest top-appointment__select-nest--date">
-            <label class="top-appointment__select-label" for="appointment-date">Дата приема</label>
-            <select class="top-appointment__form-select top-appointment__form-select--date" id="appointment-date" name="appointment-date">
-              <option class="top-appointment__form-option" value="17.06.2020">17.06.2020</option>
-              <option class="top-appointment__form-option" value="17.06.2020">18.06.2020</option>
-              <option class="top-appointment__form-option" value="17.06.2020">19.06.2020</option>
-            </select>
-          </div>
-          <div class="top-appointment__select-nest top-appointment__select-nest--time">
-            <label class="top-appointment__select-label" for="appointment-time">Время приема</label>
-            <select class="top-appointment__form-select top-appointment__form-select--time" id="appointment-time" name="appointment-time">
-              <option class="top-appointment__form-option" value="16:30">16:30</option>
-              <option class="top-appointment__form-option" value="17:00">17:00</option>
-              <option class="top-appointment__form-option" value="17:30">17:30</option>
-            </select>
-          </div>
-          <div class="top-appointment__select-nest top-appointment__select-nest--speciality">
-            <label class="top-appointment__select-label" for="appointment-speciality">Направление</label>
-            <select class="top-appointment__form-select top-appointment__form-select--speciality" id="appointment-speciality" name="appointment-speciality">
-              <option class="top-appointment__form-option" value="Ревматология">Ревматология</option>
-              <option class="top-appointment__form-option" value="Онкология">Онкология</option>
-              <option class="top-appointment__form-option" value="Терапия">Терапия</option>
-            </select>
-          </div>
-          <div class="top-appointment__select-nest top-appointment__select-nest--doctor">
-            <label class="top-appointment__select-label" for="appointment-doctor">Врач</label>
-            <select class="top-appointment__form-select top-appointment__form-select--doctor" id="appointment-doctor" name="appointment-doctor">
-              <option class="top-appointment__form-option" value="Иванов И.И.">Иванов И.И.</option>
-              <option class="top-appointment__form-option" value="Петров П.П.">Петров П.П.</option>
-              <option class="top-appointment__form-option" value="Сидоров С.С.">Сидоров С.С.</option>
-            </select>
-          </div>
-          <input class="top-appointment__form-submit btn" type="submit" value="Записаться">
-        </form>
-      </div>
-    </section>
-    <section class="banner-zone banner-zone--index section">
+    <section class="banner-zone banner-zone--contacts section">
       <div class="container">
         <div class="banner-zone__content">
           <div class="banner-zone__text-container">
-            <h1 class="banner-zone__heading section__heading">
-              Если ты пациент,<br>
-              то ты по адресу
+            <h1 class="banner-zone__heading banner-zone__heading--contacts section__heading">
+              Наши контакты
             </h1>
-            <p class="banner-zone__description">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since...
-            </p>
-            <a class="banner-zone__btn btn" href="#">
-              Подробнее
-            </a>
+            <div class="banner-zone__info-block">
+              <h2 class="banner-zone__info-heading">Телефон и адрес</h2>
+              <p class="banner-zone__info-paragraph banner-zone__info-paragraph--icon banner-zone__info-paragraph--phone">
+                <b>Телефон: </b>+ 8(812) 000 00 00
+              </p>
+              <p class="banner-zone__info-paragraph banner-zone__info-paragraph--icon banner-zone__info-paragraph--address">
+                <b>Адрес: </b>Санкт-Петербург, проспект Энгельса, д.1
+              </p>
+            </div>
+            <div class="banner-zone__info-block">
+              <h2 class="banner-zone__info-heading">График работы</h2>
+              <p class="banner-zone__info-paragraph banner-zone__info-paragraph--schedule">
+                <b>Пн-Пт: </b>08:00 — 21:00<br>
+                <b>В субботу: </b>09:00 — 19:00<br>
+                <b>В воскресенье: </b>09:00 — 15:00
+              </p>
+            </div>
           </div>
-          <div class="banner-zone__img-container">
-            <img class="banner-zone__img" src="img/placeholder-750x400.png" alt="">
-          </div>
+          <form class="banner-zone__form" action="" method="post">
+
+          </form>
         </div>
       </div>
     </section>
-    <section class="about-clinic section">
+    <section class="contacts-map section">
       <div class="container">
-        <h2 class="about-clinic__heading section__heading">
-          О нашем центре
+        <h2 class="contacts-map__heading section__heading">
+          Схема проезда
         </h2>
-        <div class="about-clinic__content">
-          <div class="about-clinic__speciality">
-            <img class="about-clinic__speciality-img" src="img/placeholder-330x300.png" alt="">
-            <h3 class="about-clinic__speciality-heading">Медицинские услуги</h3>
-            <ul class="about-clinic__speciality-list">
-              <li class="about-clinic__speciality-item">
-                <a class="about-clinic__speciality-link link" href="#">Диагностика</a>
-              </li>
-              <li class="about-clinic__speciality-item">
-                <a class="about-clinic__speciality-link link" href="#">Стационар</a>
-              </li>
-              <li class="about-clinic__speciality-item">
-                <a class="about-clinic__speciality-link link" href="#">Амбулаторные услуги</a>
-              </li>
-            </ul>
-          </div>
-          <div class="about-clinic__speciality">
-            <img class="about-clinic__speciality-img" src="img/placeholder-330x300.png" alt="">
-            <h3 class="about-clinic__speciality-heading">Направления центра</h3>
-            <ul class="about-clinic__speciality-list">
-              <li class="about-clinic__speciality-item">
-                <a class="about-clinic__speciality-link link" href="#">Онкология</a>
-              </li>
-              <li class="about-clinic__speciality-item">
-                <a class="about-clinic__speciality-link link" href="#">Ревматология</a>
-              </li>
-            </ul>
-          </div>
-          <div class="about-clinic__speciality">
-            <img class="about-clinic__speciality-img" src="img/placeholder-330x300.png" alt="">
-            <h3 class="about-clinic__speciality-heading">Клинические исследования</h3>
-            <ul class="about-clinic__speciality-list">
-              <li class="about-clinic__speciality-item">
-                <a class="about-clinic__speciality-link link" href="#">Добровольцу</a>
-              </li>
-              <li class="about-clinic__speciality-item">
-                <a class="about-clinic__speciality-link link" href="#">Пациенту</a>
-              </li>
-              <li class="about-clinic__speciality-item">
-                <a class="about-clinic__speciality-link link" href="#">Спонсору</a>
-              </li>
-            </ul>
-          </div>
-        </div>
       </div>
-    </section>
-    <section class="index-news section">
-      <div class="container">
-        <h2 class="index-news__heading section__heading">
-          Новости
-        </h2>
-        <div class="index-news__news-container">
-          <div class="index-news__item index-news__item--with-preview">
-            <a class="index-news__item-link" href="#">
-              <img class="index-news__item-img" src="img/placeholder-330x225.png" alt="">
-            </a>
-            <div class="index-news__item-info">
-              <span class="index-news__item-date">
-                23.10.2019
-              </span>
-              <a class="index-news__item-link link" href="#">
-                <h3 class="index-news__item-heading">
-                  Заголовок новости, надеюсь он будет не очень длинным...
-                </h3>
-              </a>
-              <p class="index-news__item-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since...
-              </p>
-            </div>
-          </div>
-          <div class="index-news__item">
-            <div class="index-news__item-info">
-              <span class="index-news__item-date">
-                23.10.2019
-              </span>
-              <a class="index-news__item-link link" href="#">
-                <h3 class="index-news__item-heading">
-                  Заголовок новости, надеюсь он будет не очень длинным...
-                </h3>
-              </a>
-              <p class="index-news__item-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since...
-              </p>
-            </div>
-          </div>
-          <div class="index-news__item">
-            <div class="index-news__item-info">
-              <span class="index-news__item-date">
-                23.10.2019
-              </span>
-              <a class="index-news__item-link link" href="#">
-                <h3 class="index-news__item-heading">
-                  Заголовок новости, надеюсь он будет не очень длинным...
-                </h3>
-              </a>
-              <p class="index-news__item-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since...
-              </p>
-            </div>
-          </div>
-          <div class="index-news__item index-news__item--with-preview">
-            <a class="index-news__item-link" href="#">
-              <img class="index-news__item-img" src="img/placeholder-330x225.png" alt="">
-            </a>
-            <div class="index-news__item-info">
-              <span class="index-news__item-date">
-                23.10.2019
-              </span>
-              <a class="index-news__item-link link" href="#">
-                <h3 class="index-news__item-heading">
-                  Заголовок новости, надеюсь он будет не очень длинным...
-                </h3>
-              </a>
-              <p class="index-news__item-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since...
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="index-news__news-navigation">
-          <div class="index-news__navigation-arrows">
-            <button class="index-news__navigation-arrow index-news__navigation-arrow--prev btn" type="button"></button>
-            <button class="index-news__navigation-arrow index-news__navigation-arrow--next btn" type="button"></button>
-          </div>
-          <a class="index-news__navigation-all btn btn--alternative" href="#">
-            Показать все
-          </a>
-        </div>
-      </div>
+      <div class="contacts-map__map" id="contactsMap"></div>
     </section>
   </main>
   <footer class="footer">

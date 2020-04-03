@@ -24,7 +24,7 @@
 }
 
 .header__bottom-container {
-  @include dflex(nowrap, row, space-between, center);
+  @include dflex(nowrap, row, flex-start, center);
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -127,9 +127,20 @@
   }
 }
 
+.header__logo {
+  &--big {
+    display: block;
+  }
+
+  &--small {
+    display: none;
+  }
+}
+
 .header__menu {
   @include list-reset;
   @include dflex(nowrap, row, flex-start, center);
+  margin-left: auto;
 }
 
 .header__menu-item {
@@ -167,6 +178,11 @@
   }
 }
 
+.header__appointment-btn {
+  min-width: 130px;
+  margin-left: 30px;
+}
+
 .header__menu-toggle {
   display: none;
   outline: none;
@@ -175,12 +191,14 @@
 .header__submenu-block {
   position: absolute;
   left: 0;
+  display: none;
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: #fff;
 
   &--open {
+    display: block;
     box-shadow: 0 10px 80px rgba(#00003E,.05);
     z-index: -1;
   }
@@ -306,6 +324,18 @@
 
   .header__menu-link {
     padding-right: 25px;
+    font-size: 13px;
+  }
+
+  .header__appointment-btn {
+    min-width: 40px;
+    max-width: 40px;
+    margin-left: 15px;
+    font-size: 0;
+    background-image: url("../img/icon-calendar-white.svg");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 
@@ -329,32 +359,36 @@
     display: none;
   }
 
+  .header__appointment-btn {
+    margin-right: 20px;
+    margin-left: auto;
+  }
+
   .header__menu-toggle {
+    @include transition(background-color);
     display: block;
     padding: 0;
-    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    font-size: 30px;
+    line-height: 40px;
+    background-color: $main-color;
+    background-image: url("../img/icon-burger-menu-handmade.svg");
+    background-position: center;
+    background-size: 20px;
+    background-repeat: no-repeat;
     border: none;
     cursor: pointer;
 
-    & path {
-      @include transition(fill);
-      fill: $main-color;
-    }
-
     &:hover,
     &:focus {
-      & path {
-        fill: $extra-color;
-      }
+      background-color: $extra-color;
     }
+  }
 
-    // &--open {
-    //   border: 1px solid $main-color;
-    //
-    //   & path {
-    //     fill: #fff;
-    //   }
-    // }
+  .header--index .header__menu-toggle {
+    margin-left: auto;
   }
 
   .header__submenu-container {
@@ -489,8 +523,23 @@
     padding-left: 22px;
   }
 
+  .header__bottom-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
   .header__logo {
-    width: 250px;
+    &--big {
+      display: none;
+    }
+
+    &--small {
+      display: block;
+    }
+  }
+
+  .header__appointment-btn {
+    margin-right: 10px;
   }
 
   .header__submenu-heading {
