@@ -1,0 +1,47 @@
+.services-rules {
+  padding-top: 163px;
+  padding-bottom: 162px;
+  background-color: #f7f6fd;
+  background-image: url("../img/bg-banner-big.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.services-rules__content {
+  & p {
+    @include reset;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: justify;
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@media (max-width: $notebook-width) {
+  .services-rules {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .services-rules {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .services-rules__content {
+    & p {
+      font-size: 16px;
+      line-height: 22px;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

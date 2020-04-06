@@ -20,6 +20,18 @@
     padding-top: 60px;
     padding-bottom: 60px;
   }
+
+  &--search {
+    height: 400px;
+
+    & .btn {
+      width: 200px;
+    }
+
+    & .banner-zone__text-container {
+      flex-basis: 430px;
+    }
+  }
 }
 
 .banner-zone__content {
@@ -121,6 +133,11 @@
   margin-bottom: 25px;
   font-size: 18px;
   line-height: 22px;
+
+  &--search {
+    margin-bottom: 35px;
+    padding-right: 20px;
+  }
 }
 
 .banner-zone__form {
@@ -143,10 +160,19 @@
 .banner-zone__form-description {
   @include reset;
   margin-bottom: 30px;
-  padding-bottom: 30px;
   font-size: 16px;
   line-height: 20px;
-  border-bottom: 1px solid #EAEAF5;
+
+  &--appoint {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #EAEAF5;
+  }
+
+  &--search {
+    margin-bottom: 37px;
+    font-size: 18px;
+    line-height: 16px;
+  }
 }
 
 .banner-zone__text-inputs {
@@ -167,10 +193,6 @@
   width: 100%;
   height: 40px;
   border: none;
-
-  // &--big {
-  //   width: 100%;
-  // }
 
   &--text {
     margin-bottom: 20px;
@@ -193,6 +215,39 @@
     &:checked ~ .banner-zone__text-span {
       color: $text-color;
     }
+  }
+
+  &--search {
+    width: 100%;
+    height: 50px;
+    padding-left: 30px;
+    padding-right: 60px;
+    border: 1px solid #EAEAF5;
+
+    &::placeholder {
+      color: #A2A6B7;
+      font-size: 16px;
+      line-height: 50px;
+      opacity: 1;
+    }
+  }
+}
+
+.banner-zone__input-search-label {
+  position: relative;
+  width: 100%;
+
+  &::after {
+    @include abs-pseudo;
+    top: 0;
+    right: 25px;
+    width: 30px;
+    height: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-image: url("../img/icon-search.svg");
+    cursor: pointer;
   }
 }
 
@@ -312,6 +367,10 @@
     &--index {
       min-height: 0;
     }
+
+    &--search {
+      height: auto;
+    }
   }
 
   .banner-zone__text-container {
@@ -338,6 +397,12 @@
     &--index {
       padding-top: 50px;
       padding-bottom: 50px;
+    }
+
+    &--search {
+      & .banner-zone__text-container {
+        flex-basis: auto;
+      }
     }
   }
 
@@ -374,6 +439,10 @@
   .banner-zone__form {
     flex-basis: 100%;
     margin-bottom: 30px;
+
+    &--search {
+      width: 100%;
+    }
   }
 
   .banner-zone__info-block {

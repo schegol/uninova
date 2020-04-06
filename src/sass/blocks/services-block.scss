@@ -1,0 +1,123 @@
+.services-block {
+  padding-bottom: 0;
+}
+
+.services-block__content {
+  @include dflex(wrap, row, space-between, flex-start);
+}
+
+.services-block__category {
+  flex-basis: 330px;
+  margin-bottom: 80px;
+}
+
+.services-block__heading {
+  @include reset;
+  @include dflex(nowrap, row, flex-start, center);
+  position: relative;
+  min-height: 58px;
+  margin-bottom: 60px;
+  padding-left: 90px;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 58px;
+
+  &::after {
+    @include abs-pseudo;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #EAEAF5;
+  }
+}
+
+.services-block__list {
+  @include list-reset;
+}
+
+.services-block__item {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.services-block__link {
+  position: relative;
+  display: block;
+  padding-left: 30px;
+  color: $text-color;
+  font-size: 18px;
+  line-height: 20px;
+
+  &::before {
+    @include abs-pseudo;
+    top: 7px;
+    left: 0;
+    width: 7px;
+    height: 7px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+
+  &:hover,
+  &:focus {
+    font-weight: 500;
+    text-decoration: underline;
+
+    &::before {
+      background-color: #54D8AF;
+    }
+  }
+}
+
+@media (max-width: $notebook-width) {
+  .services-block__category {
+    flex-basis: 300px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .services-block__category {
+    flex-basis: 241px;
+  }
+
+  .services-block__heading {
+    padding-left: 75px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .services-block__link {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .services-block__category {
+    flex-basis: calc(50% - 10px);
+  }
+}
+
+@media (max-width: $xs-mobile-width) {
+  .services-block__category {
+    flex-basis: 100%;
+  }
+
+  .services-block__heading {
+    display: flex;
+    justify-content: center;
+    padding-right: 75px;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .services-block__link {
+    font-size: 15px;
+  }
+}

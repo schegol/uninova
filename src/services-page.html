@@ -177,84 +177,193 @@
     </div>
   </header>
   <main class="main">
-    <section class="banner-zone banner-zone--contacts section">
+    <section class="banner-zone banner-zone--search section">
       <div class="container">
         <div class="banner-zone__content">
-          <div class="banner-zone__text-container banner-zone__text-container--contacts">
-            <h1 class="banner-zone__heading banner-zone__heading--contacts section__heading">
-              Наши контакты
+          <div class="banner-zone__text-container">
+            <h1 class="banner-zone__heading section__heading">
+              Наши услуги
             </h1>
-            <div class="banner-zone__info-block">
-              <h2 class="banner-zone__info-heading">Телефон и адрес</h2>
-              <p class="banner-zone__info-paragraph banner-zone__info-paragraph--icon banner-zone__info-paragraph--phone">
-                <b>Телефон: </b>+ 8(812) 000 00 00
-              </p>
-              <p class="banner-zone__info-paragraph banner-zone__info-paragraph--icon banner-zone__info-paragraph--address">
-                <b>Адрес: </b>Санкт-Петербург, проспект Энгельса, д.1
-              </p>
-            </div>
-            <div class="banner-zone__info-block">
-              <h2 class="banner-zone__info-heading">График работы</h2>
-              <p class="banner-zone__info-paragraph banner-zone__info-paragraph--schedule">
-                <b>Пн-Пт: </b>08:00 — 21:00<br>
-                <b>В субботу: </b>09:00 — 19:00<br>
-                <b>В воскресенье: </b>09:00 — 15:00
-              </p>
-            </div>
-          </div>
-          <form class="banner-zone__form banner-zone__form--appoint" action="" method="post">
-            <h2 class="banner-zone__form-heading">Заполните форму</h2>
-            <p class="banner-zone__form-description banner-zone__form-description--appoint">
-              Для записи на прием заполните форму, либо позвоните нам по номеру +7(812)&nbsp;000&nbsp;00&nbsp;00
+            <p class="banner-zone__description banner-zone__description--search">
+              Текст о медицинских услугах нашей клиники который желательно уместить в три или четыре строчки краткого и содержательного текста.
             </p>
-            <div class="banner-zone__text-inputs">
-              <label class="banner-zone__input-text-label banner-zone__input-text-label--name">
-                <span class="banner-zone__decorative-span banner-zone__decorative-span--text"></span>
-                <input class="banner-zone__form-input banner-zone__form-input--text banner-zone__form-input--name" type="text" name="name" placeholder="Ф.И.О">
-              </label>
-              <label class="banner-zone__input-text-label banner-zone__input-text-label--phone">
-                <span class="banner-zone__decorative-span banner-zone__decorative-span--text"></span>
-                <input class="banner-zone__form-input banner-zone__form-input--text banner-zone__form-input--phone" type="tel" name="phone" placeholder="Ваш телефон">
-              </label>
-              <label class="banner-zone__input-text-label banner-zone__input-text-label--doctor banner-zone__input-text-label--big">
-                <span class="banner-zone__decorative-span banner-zone__decorative-span--text"></span>
-                <input class="banner-zone__form-input banner-zone__form-input--text banner-zone__form-input--doctor banner-zone__form-input--big" name="doctor" type="text" placeholder="К какому специалисту вы хотите попасть?">
-              </label>
-              <label class="banner-zone__input-text-label banner-zone__input-text-label--time">
-                <span class="banner-zone__decorative-span banner-zone__decorative-span--text"></span>
-                <input class="banner-zone__form-input banner-zone__form-input--text banner-zone__form-input--time" type="text" name="time" placeholder="Выберите время">
-              </label>
-              <label class="banner-zone__input-text-label banner-zone__input-text-label--date">
-                <span class="banner-zone__decorative-span banner-zone__decorative-span--text"></span>
-                <input class="banner-zone__form-input banner-zone__form-input--text banner-zone__form-input--date" type="text" name="date" placeholder="Выберите дату">
-              </label>
-            </div>
-            <label class="banner-zone__input-checkbox-label">
-              <input class="banner-zone__form-input banner-zone__form-input--checkbox visually-hidden-input" type="checkbox">
-              <span class="banner-zone__decorative-span banner-zone__decorative-span--checkbox"></span>
-              <span class="banner-zone__text-span banner-zone__decorative-text--checkbox">
-                Я ознакомился и согласен с условиями использования сервиса и Условиями использования сайта*
-              </span>
+            <a class="banner-zone__btn btn" href="contacts.html">
+              Записаться на прием
+            </a>
+          </div>
+          <form class="banner-zone__form banner-zone__form--search" action="" method="get">
+            <h3 class="banner-zone__form-heading">Поиск услуги</h3>
+            <p class="banner-zone__form-description banner-zone__form-description--search">
+              Если вы знаете что вам нужно - воспользуйтесь поиском
+            </p>
+            <label class="banner-zone__input-search-label">
+              <input class="banner-zone__form-input banner-zone__form-input--search" type="text" name="date" placeholder="Начните вводить текст...">
             </label>
-            <label class="banner-zone__input-checkbox-label">
-              <input class="banner-zone__form-input banner-zone__form-input--checkbox visually-hidden-input" type="checkbox">
-              <span class="banner-zone__decorative-span banner-zone__decorative-span--checkbox"></span>
-              <span class="banner-zone__text-span banner-zone__decorative-text--checkbox">
-                Я согласен на обработку персональных данных**
-              </span>
-            </label>
-            <input type="submit" class="banner-zone__form-submit btn" value="Записаться">
           </form>
         </div>
       </div>
     </section>
-    <section class="contacts-map section">
+    <section class="services-block section">
       <div class="container">
-        <h2 class="contacts-map__heading section__heading">
-          Схема проезда
-        </h2>
+        <div class="services-block__content">
+          <div class="services-block__category">
+            <h2 class="services-block__heading" style="background-image: url('../img/icon-structure-ambulant.svg');">Амбулатория</h2>
+            <ul class="services-block__list">
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 1</a>
+              </li>
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 2</a>
+              </li>
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 3</a>
+              </li>
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 4</a>
+              </li>
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 5</a>
+              </li>
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 6</a>
+              </li>
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 7</a>
+              </li>
+            </ul>
+          </div>
+          <div class="services-block__category">
+            <h2 class="services-block__heading" style="background-image: url('../img/icon-structure-hospital.svg');">Стационар</h2>
+            <ul class="services-block__list">
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 1</a>
+              </li>
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 2</a>
+              </li>
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 3</a>
+              </li>
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 4</a>
+              </li>
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 5</a>
+              </li>
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 6</a>
+              </li>
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 7</a>
+              </li>
+            </ul>
+          </div>
+          <div class="services-block__category">
+            <h2 class="services-block__heading" style="background-image: url('../img/icon-structure-research.svg');">Центр клинических исследований</h2>
+            <ul class="services-block__list">
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 1</a>
+              </li>
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 2</a>
+              </li>
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 3</a>
+              </li>
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 4</a>
+              </li>
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 5</a>
+              </li>
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 6</a>
+              </li>
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 7</a>
+              </li>
+            </ul>
+          </div>
+          <div class="services-block__category">
+            <h2 class="services-block__heading" style="background-image: url('../img/icon-structure-diagnostics.svg');">Диагностика</h2>
+            <ul class="services-block__list">
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 1</a>
+              </li>
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 2</a>
+              </li>
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 3</a>
+              </li>
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 4</a>
+              </li>
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 5</a>
+              </li>
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 6</a>
+              </li>
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 7</a>
+              </li>
+            </ul>
+          </div>
+          <div class="services-block__category">
+            <h2 class="services-block__heading" style="background-image: url('../img/icon-structure-hospital.svg');">Дневной стационар</h2>
+            <ul class="services-block__list">
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 1</a>
+              </li>
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 2</a>
+              </li>
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 3</a>
+              </li>
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 4</a>
+              </li>
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 5</a>
+              </li>
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 6</a>
+              </li>
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 7</a>
+              </li>
+            </ul>
+          </div>
+          <div class="services-block__category">
+            <h2 class="services-block__heading" style="background-image: url('../img/icon-structure-lab.svg');">Лаборатория</h2>
+            <ul class="services-block__list">
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 1</a>
+              </li>
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 2</a>
+              </li>
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 3</a>
+              </li>
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 4</a>
+              </li>
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 5</a>
+              </li>
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 6</a>
+              </li>
+              <li class="services-block__item">
+                <a class="services-block__link" href="#">Наименование услуги 7</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="contacts-map__map" id="contactsMap"></div>
     </section>
   </main>
   <footer class="footer">
