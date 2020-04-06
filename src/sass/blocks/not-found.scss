@@ -1,0 +1,87 @@
+.not-found {
+  @include dflex(nowrap, row, center, center);
+  height: 940px;
+  background-color: #f7f6fd;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../img/bg-banner-big.png");
+}
+
+.not-found__content {
+  @include dflex(nowrap, column, center, center);
+}
+
+.not-found__heading {
+  @include reset;
+  margin-bottom: 10px;
+  color: $main-color;
+  font-size: 180px;
+  line-height: 180px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.not-found__text {
+  @include reset;
+  margin-bottom: 35px;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+}
+
+.not-found__btn {
+  min-width: 210px;
+  border-radius: 40px;
+}
+
+@media (max-width: $notebook-width) {
+  .not-found {
+    height: 800px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .not-found {
+    height: 650px;
+  }
+
+  .not-found__heading {
+    font-size: 150px;
+    line-height: 150px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .not-found {
+    height: 500px;
+  }
+
+  .not-found__heading {
+    font-size: 120px;
+    line-height: 120px;
+  }
+
+  .not-found__text {
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: $xs-mobile-width) {
+  .not-found {
+    height: 450px;
+  }
+
+  .not-found__heading {
+    font-size: 100px;
+    line-height: 100px;
+  }
+
+  .not-found__text {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
