@@ -15,6 +15,8 @@ $(document).ready(function() {
   const topHeader = $('.header__visible-part');
   //десктопные переключатели главного меню, соответствующие названиям пунктов 1 уровня меню:
   const desktopMenuToggle = $('.header__menu-link');
+  //кнопка разворачивания прайс-листа с услугами:
+  const priceListToggle = $('.services-prices__table-toggle');
 
   //размеры видимого хедера и блока раскрытого основного меню
   var headerHeight = topHeader.outerHeight();
@@ -81,6 +83,13 @@ $(document).ready(function() {
         menu.css('top', headerHeight);
         main.css('padding-top', openMenuHeight);
       };
+    });
+  });
+
+  //раскрытие прайслистов
+  priceListToggle.each(function () {
+    $(this).click(function () {
+      $(this).parents('.services-prices__table').toggleClass('services-prices__table--open');
     });
   });
 

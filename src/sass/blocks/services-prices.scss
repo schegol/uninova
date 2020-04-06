@@ -1,0 +1,117 @@
+.services-prices__table {
+  width: 100%;
+  border-collapse: collapse;
+
+  td,
+  th {
+    padding: 15px 20px;
+    border: 1px solid #EAEAF5;
+  }
+}
+
+.services-prices__table-heading-wrapper {
+  @include dflex(nowrap, row, space-between, center);
+}
+
+.services-prices__table-heading {
+  @include reset;
+  display: inline-block;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.services-prices__table-toggle {
+  @include transition(background-color);
+  position: relative;
+  min-width: 100px;
+  height: 25px;
+  padding: 0 25px 0 10px;
+  color: #C0C5D8;
+  font-size: 12px;
+  line-height: 25px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border: 1px solid #EAEAF5;
+  background-color: #fff;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: #fbfbff;
+    outline: none;
+  }
+
+  &::after {
+    @include abs-pseudo;
+    @include transition(transform);
+    top: 50%;
+    right: 10px;
+    width: 8px;
+    height: 5px;
+    background-image: url("../img/icon-arrow-grey.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translateY(-50%) rotate(0);
+  }
+}
+
+.services-prices__table-toggle-span {
+  @include transition(background-color);
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+
+  &--show {
+    display: block;
+
+  }
+
+  &--hide {
+    display: none;
+  }
+}
+
+.services-prices__table-subheading-cell {
+  text-align: left;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  &--id {
+    width: 11%;
+  }
+
+  &--name {
+    width: 68%;
+  }
+}
+
+.services-prices__table-body {
+  tr {
+    &:nth-of-type(odd) {
+      background-color: #fbfbff;
+    }
+  }
+}
+
+.services-prices__table--open {
+  & .services-prices__table-toggle-span {
+    &--show {
+      display: none;
+    }
+
+    &--hide {
+      display: block;
+    }
+  }
+
+  & .services-prices__table-toggle {
+    &::after {
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+}
