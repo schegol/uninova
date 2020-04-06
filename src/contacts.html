@@ -180,7 +180,7 @@
     <section class="banner-zone banner-zone--contacts section">
       <div class="container">
         <div class="banner-zone__content">
-          <div class="banner-zone__text-container">
+          <div class="banner-zone__text-container banner-zone__text-container--contacts">
             <h1 class="banner-zone__heading banner-zone__heading--contacts section__heading">
               Наши контакты
             </h1>
@@ -203,7 +203,46 @@
             </div>
           </div>
           <form class="banner-zone__form" action="" method="post">
-
+            <h2 class="banner-zone__form-heading">Заполните форму</h2>
+            <p class="banner-zone__form-description">Для записи на прием заполните форму, либо позвоните нам по номеру
++7(812)&nbsp;000&nbsp;00&nbsp;00</p>
+            <div class="banner-zone__text-inputs">
+              <label class="banner-zone__input-text-label banner-zone__input-text-label--name">
+                <span class="banner-zone__decorative-span banner-zone__decorative-span--text"></span>
+                <input class="banner-zone__form-input banner-zone__form-input--text banner-zone__form-input--name" type="text" name="name" placeholder="Ф.И.О">
+              </label>
+              <label class="banner-zone__input-text-label banner-zone__input-text-label--phone">
+                <span class="banner-zone__decorative-span banner-zone__decorative-span--text"></span>
+                <input class="banner-zone__form-input banner-zone__form-input--text banner-zone__form-input--phone" type="tel" name="phone" placeholder="Ваш телефон">
+              </label>
+              <label class="banner-zone__input-text-label banner-zone__input-text-label--doctor banner-zone__input-text-label--big">
+                <span class="banner-zone__decorative-span banner-zone__decorative-span--text"></span>
+                <input class="banner-zone__form-input banner-zone__form-input--text banner-zone__form-input--doctor banner-zone__form-input--big" name="doctor" type="text" placeholder="К какому специалисту вы хотите попасть?">
+              </label>
+              <label class="banner-zone__input-text-label banner-zone__input-text-label--time">
+                <span class="banner-zone__decorative-span banner-zone__decorative-span--text"></span>
+                <input class="banner-zone__form-input banner-zone__form-input--text banner-zone__form-input--time" type="text" name="time" placeholder="Выберите время">
+              </label>
+              <label class="banner-zone__input-text-label banner-zone__input-text-label--date">
+                <span class="banner-zone__decorative-span banner-zone__decorative-span--text"></span>
+                <input class="banner-zone__form-input banner-zone__form-input--text banner-zone__form-input--date" type="text" name="date" placeholder="Выберите дату">
+              </label>
+            </div>
+            <label class="banner-zone__input-checkbox-label">
+              <input class="banner-zone__form-input banner-zone__form-input--checkbox visually-hidden-input" type="checkbox">
+              <span class="banner-zone__decorative-span banner-zone__decorative-span--checkbox"></span>
+              <span class="banner-zone__text-span banner-zone__decorative-text--checkbox">
+                Я ознакомился и согласен с условиями использования сервиса и Условиями использования сайта*
+              </span>
+            </label>
+            <label class="banner-zone__input-checkbox-label">
+              <input class="banner-zone__form-input banner-zone__form-input--checkbox visually-hidden-input" type="checkbox">
+              <span class="banner-zone__decorative-span banner-zone__decorative-span--checkbox"></span>
+              <span class="banner-zone__text-span banner-zone__decorative-text--checkbox">
+                Я согласен на обработку персональных данных**
+              </span>
+            </label>
+            <input type="submit" class="banner-zone__form-submit btn" value="Записаться">
           </form>
         </div>
       </div>
