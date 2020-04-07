@@ -206,74 +206,444 @@
     <section class="services-prices section">
       <h2 class="visually-hidden">Цены на наши услуги</h2>
       <div class="container">
-        <table class="services-prices__table services-prices__table--open">
-          <thead class="services-prices__table-head">
-            <tr>
-              <th class="services-prices__table-heading-cell" colspan="3">
-                <div class="services-prices__table-heading-wrapper">
-                  <span class="services-prices__table-heading">Амбулатория</span>
-                  <button class="services-prices__table-toggle">
-                    <span class="services-prices__table-toggle-span services-prices__table-toggle-span--hide">Свернуть</span>
-                    <span class="services-prices__table-toggle-span services-prices__table-toggle-span--show">Развернуть</span>
-                  </button>
-                </div>
-              </th>
-            </tr>
-            <tr>
-              <th class="services-prices__table-subheading-cell services-prices__table-subheading-cell--id">ID услуги</th>
-              <th class="services-prices__table-subheading-cell services-prices__table-subheading-cell--name">Наименование услуги</th>
-              <th class="services-prices__table-subheading-cell services-prices__table-subheading-cell--price">Стоимость услуги</th>
-            </tr>
-          </thead>
-          <tbody class="services-prices__table-body">
-            <tr>
-              <td class="services-prices__table-cell services-prices__table-cell--id">100001</td>
-              <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
-              <td class="services-prices__table-cell services-prices__table-cell--price">1300 рублей</td>
-            </tr>
-            <tr>
-              <td class="services-prices__table-cell services-prices__table-cell--id">100002</td>
-              <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
-              <td class="services-prices__table-cell services-prices__table-cell--price">1550 рублей</td>
-            </tr>
-            <tr>
-              <td class="services-prices__table-cell services-prices__table-cell--id">100003</td>
-              <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
-              <td class="services-prices__table-cell services-prices__table-cell--price">1130 рублей</td>
-            </tr>
-            <tr>
-              <td class="services-prices__table-cell services-prices__table-cell--id">100004</td>
-              <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
-              <td class="services-prices__table-cell services-prices__table-cell--price">1890 рублей</td>
-            </tr>
-            <tr>
-              <td class="services-prices__table-cell services-prices__table-cell--id">100005</td>
-              <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
-              <td class="services-prices__table-cell services-prices__table-cell--price">2400 рублей</td>
-            </tr>
-            <tr>
-              <td class="services-prices__table-cell services-prices__table-cell--id">100006</td>
-              <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
-              <td class="services-prices__table-cell services-prices__table-cell--price">3500 рублей</td>
-            </tr>
-            <tr>
-              <td class="services-prices__table-cell services-prices__table-cell--id">100007</td>
-              <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
-              <td class="services-prices__table-cell services-prices__table-cell--price">5400 рублей</td>
-            </tr>
-            <tr>
-              <td class="services-prices__table-cell services-prices__table-cell--id">100008</td>
-              <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
-              <td class="services-prices__table-cell services-prices__table-cell--price">2350 рублей</td>
-            </tr>
-            <tr>
-              <td class="services-prices__table-cell services-prices__table-cell--id">100009</td>
-              <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
-              <td class="services-prices__table-cell services-prices__table-cell--price">3430 рублей</td>
-            </tr>
-          </tbody>
-        </table>
-
+        <div class="services-prices__item">
+          <table class="services-prices__table services-prices__table--open">
+            <thead class="services-prices__table-head">
+              <tr>
+                <th class="services-prices__table-heading-cell" colspan="3">
+                  <div class="services-prices__table-heading-wrapper">
+                    <span class="services-prices__table-heading">Амбулатория</span>
+                    <button class="services-prices__table-toggle">
+                      <span class="services-prices__table-toggle-span services-prices__table-toggle-span--hide">Свернуть</span>
+                      <span class="services-prices__table-toggle-span services-prices__table-toggle-span--show">Развернуть</span>
+                    </button>
+                  </div>
+                </th>
+              </tr>
+              <tr>
+                <th class="services-prices__table-subheading-cell services-prices__table-subheading-cell--id">ID услуги</th>
+                <th class="services-prices__table-subheading-cell services-prices__table-subheading-cell--name">Наименование услуги</th>
+                <th class="services-prices__table-subheading-cell services-prices__table-subheading-cell--price">Стоимость услуги</th>
+              </tr>
+            </thead>
+          </table>
+          <div class="services-prices__togglable-wrapper">
+            <table class="services-prices__table services-prices__table--togglable">
+              <tbody class="services-prices__table-body">
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100001</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">1300 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100002</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">1550 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100003</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">1130 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100004</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">1890 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100005</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">2400 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100006</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">3500 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100007</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">5400 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100008</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">2350 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100009</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">3430 рублей</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="services-prices__item">
+          <table class="services-prices__table">
+            <thead class="services-prices__table-head">
+              <tr>
+                <th class="services-prices__table-heading-cell" colspan="3">
+                  <div class="services-prices__table-heading-wrapper">
+                    <span class="services-prices__table-heading">Стационар</span>
+                    <button class="services-prices__table-toggle">
+                      <span class="services-prices__table-toggle-span services-prices__table-toggle-span--hide">Свернуть</span>
+                      <span class="services-prices__table-toggle-span services-prices__table-toggle-span--show">Развернуть</span>
+                    </button>
+                  </div>
+                </th>
+              </tr>
+              <tr>
+                <th class="services-prices__table-subheading-cell services-prices__table-subheading-cell--id">ID услуги</th>
+                <th class="services-prices__table-subheading-cell services-prices__table-subheading-cell--name">Наименование услуги</th>
+                <th class="services-prices__table-subheading-cell services-prices__table-subheading-cell--price">Стоимость услуги</th>
+              </tr>
+            </thead>
+          </table>
+          <div class="services-prices__togglable-wrapper" style="display: none;">
+            <table class="services-prices__table services-prices__table--togglable">
+              <tbody class="services-prices__table-body">
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100001</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">1300 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100002</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">1550 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100003</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">1130 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100004</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">1890 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100005</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">2400 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100006</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">3500 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100007</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">5400 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100008</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">2350 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100009</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">3430 рублей</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="services-prices__item">
+          <table class="services-prices__table">
+            <thead class="services-prices__table-head">
+              <tr>
+                <th class="services-prices__table-heading-cell" colspan="3">
+                  <div class="services-prices__table-heading-wrapper">
+                    <span class="services-prices__table-heading">Центр клинических исследований</span>
+                    <button class="services-prices__table-toggle">
+                      <span class="services-prices__table-toggle-span services-prices__table-toggle-span--hide">Свернуть</span>
+                      <span class="services-prices__table-toggle-span services-prices__table-toggle-span--show">Развернуть</span>
+                    </button>
+                  </div>
+                </th>
+              </tr>
+              <tr>
+                <th class="services-prices__table-subheading-cell services-prices__table-subheading-cell--id">ID услуги</th>
+                <th class="services-prices__table-subheading-cell services-prices__table-subheading-cell--name">Наименование услуги</th>
+                <th class="services-prices__table-subheading-cell services-prices__table-subheading-cell--price">Стоимость услуги</th>
+              </tr>
+            </thead>
+          </table>
+          <div class="services-prices__togglable-wrapper" style="display: none;">
+            <table class="services-prices__table services-prices__table--togglable">
+              <tbody class="services-prices__table-body">
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100001</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">1300 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100002</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">1550 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100003</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">1130 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100004</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">1890 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100005</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">2400 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100006</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">3500 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100007</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">5400 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100008</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">2350 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100009</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">3430 рублей</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="services-prices__item">
+          <table class="services-prices__table">
+            <thead class="services-prices__table-head">
+              <tr>
+                <th class="services-prices__table-heading-cell" colspan="3">
+                  <div class="services-prices__table-heading-wrapper">
+                    <span class="services-prices__table-heading">Диагностика</span>
+                    <button class="services-prices__table-toggle">
+                      <span class="services-prices__table-toggle-span services-prices__table-toggle-span--hide">Свернуть</span>
+                      <span class="services-prices__table-toggle-span services-prices__table-toggle-span--show">Развернуть</span>
+                    </button>
+                  </div>
+                </th>
+              </tr>
+              <tr>
+                <th class="services-prices__table-subheading-cell services-prices__table-subheading-cell--id">ID услуги</th>
+                <th class="services-prices__table-subheading-cell services-prices__table-subheading-cell--name">Наименование услуги</th>
+                <th class="services-prices__table-subheading-cell services-prices__table-subheading-cell--price">Стоимость услуги</th>
+              </tr>
+            </thead>
+          </table>
+          <div class="services-prices__togglable-wrapper" style="display: none;">
+            <table class="services-prices__table services-prices__table--togglable">
+              <tbody class="services-prices__table-body">
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100001</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">1300 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100002</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">1550 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100003</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">1130 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100004</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">1890 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100005</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">2400 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100006</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">3500 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100007</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">5400 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100008</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">2350 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100009</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">3430 рублей</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="services-prices__item">
+          <table class="services-prices__table">
+            <thead class="services-prices__table-head">
+              <tr>
+                <th class="services-prices__table-heading-cell" colspan="3">
+                  <div class="services-prices__table-heading-wrapper">
+                    <span class="services-prices__table-heading">Дневной стационар</span>
+                    <button class="services-prices__table-toggle">
+                      <span class="services-prices__table-toggle-span services-prices__table-toggle-span--hide">Свернуть</span>
+                      <span class="services-prices__table-toggle-span services-prices__table-toggle-span--show">Развернуть</span>
+                    </button>
+                  </div>
+                </th>
+              </tr>
+              <tr>
+                <th class="services-prices__table-subheading-cell services-prices__table-subheading-cell--id">ID услуги</th>
+                <th class="services-prices__table-subheading-cell services-prices__table-subheading-cell--name">Наименование услуги</th>
+                <th class="services-prices__table-subheading-cell services-prices__table-subheading-cell--price">Стоимость услуги</th>
+              </tr>
+            </thead>
+          </table>
+          <div class="services-prices__togglable-wrapper" style="display: none;">
+            <table class="services-prices__table services-prices__table--togglable">
+              <tbody class="services-prices__table-body">
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100001</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">1300 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100002</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">1550 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100003</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">1130 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100004</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">1890 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100005</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">2400 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100006</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">3500 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100007</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">5400 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100008</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">2350 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100009</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">3430 рублей</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="services-prices__item">
+          <table class="services-prices__table">
+            <thead class="services-prices__table-head">
+              <tr>
+                <th class="services-prices__table-heading-cell" colspan="3">
+                  <div class="services-prices__table-heading-wrapper">
+                    <span class="services-prices__table-heading">Лаборатория</span>
+                    <button class="services-prices__table-toggle">
+                      <span class="services-prices__table-toggle-span services-prices__table-toggle-span--hide">Свернуть</span>
+                      <span class="services-prices__table-toggle-span services-prices__table-toggle-span--show">Развернуть</span>
+                    </button>
+                  </div>
+                </th>
+              </tr>
+              <tr>
+                <th class="services-prices__table-subheading-cell services-prices__table-subheading-cell--id">ID услуги</th>
+                <th class="services-prices__table-subheading-cell services-prices__table-subheading-cell--name">Наименование услуги</th>
+                <th class="services-prices__table-subheading-cell services-prices__table-subheading-cell--price">Стоимость услуги</th>
+              </tr>
+            </thead>
+          </table>
+          <div class="services-prices__togglable-wrapper" style="display: none;">
+            <table class="services-prices__table services-prices__table--togglable">
+              <tbody class="services-prices__table-body">
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100001</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">1300 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100002</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">1550 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100003</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">1130 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100004</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">1890 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100005</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">2400 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100006</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">3500 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100007</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">5400 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100008</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">2350 рублей</td>
+                </tr>
+                <tr>
+                  <td class="services-prices__table-cell services-prices__table-cell--id">100009</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--name">Тут будет очень длинное название данной услуги которую мы оказываем</td>
+                  <td class="services-prices__table-cell services-prices__table-cell--price">3430 рублей</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </section>
   </main>

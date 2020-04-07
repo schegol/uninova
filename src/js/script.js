@@ -15,8 +15,6 @@ $(document).ready(function() {
   const topHeader = $('.header__visible-part');
   //десктопные переключатели главного меню, соответствующие названиям пунктов 1 уровня меню:
   const desktopMenuToggle = $('.header__menu-link');
-  //кнопка разворачивания прайс-листа с услугами:
-  const priceListToggle = $('.services-prices__table-toggle');
 
   //размеры видимого хедера и блока раскрытого основного меню
   var headerHeight = topHeader.outerHeight();
@@ -86,14 +84,38 @@ $(document).ready(function() {
     });
   });
 
+  //кнопка разворачивания прайс-листа с услугами:
+  const priceListToggle = $('.services-prices__table-toggle');
+
   //раскрытие прайслистов
   priceListToggle.each(function () {
     $(this).click(function () {
       $(this).parents('.services-prices__table').toggleClass('services-prices__table--open');
+      $(this).parents('.services-prices__table').next('.services-prices__togglable-wrapper').slideToggle(500);
     });
   });
 
+  //ячейки таблиц с прайс-листами:
+  const tableHeading = $('.services-prices__table-subheading-cell');
+
+  //функция для получения ширины ячеек-заголовков таблицы и присваивания этой ширины соответствующим ячейкам ниже
+  var tableCellsWidth = function (headingCells) {
+    let headingCellsFiltered = headingCells.not(':last-of-type');
+    
+    headingCellsFiltered.each(function () {
+      let headingCellWidth = $(this).outerWidth();
+      let className = $(this).attr('class');
+      let classNamePart = className.match(/--([^ ]*)/)[1];
+      let tableItems = $(this).parents('.services-prices__item').find('td[class*='+classNamePart+']');
+
+      tableItems.css('width', headingCellWidth);
+    });
+  };
+
+  tableCellsWidth(tableHeading);
+
   $(window).resize(function () {
+    tableCellsWidth(tableHeading);
     refreshHeights();
 
     //положения элементов при открытом меню
