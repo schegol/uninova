@@ -9,12 +9,22 @@ $(document).ready(function() {
   const menu = $('.header__submenu-block');
   //мобильный переключатель основного меню (кнопка):
   const mobileMenuToggle = $('.header__menu-toggle');
+  //блок, включающий пункты осн. меню 3 уровня:
+  const subsubmenuList = $('.header__subsubmenu-list');
+  //кнопка открывания подменю основного меню 3 уровня ("плюсик"):
+  const subsubmenuToggle = $('.header__subsubmenu-toggle');
   //main (основная часть сайта, без футера и хедера):
   const main = $('main.main');
   //та часть хедера, которая видна всегда, независимо от того, раскрыто ли основное меню:
   const topHeader = $('.header__visible-part');
   //десктопные переключатели главного меню, соответствующие названиям пунктов 1 уровня меню:
   const desktopMenuToggle = $('.header__menu-link');
+  //кнопка замены баннера на форму записи на странице контактов:
+  const servicesFormSwitch = $('.banner-zone--services .banner-zone__btn');
+  //баннер на странице контактов:
+  const servicesBanner = $('.banner-zone--services .banner-zone__img-container');
+  //форма на странице контактов:
+  const servicesForm = $('.banner-zone--services .banner-zone__form')
 
   //размеры видимого хедера и блока раскрытого основного меню
   var headerHeight = topHeader.outerHeight();
@@ -84,6 +94,19 @@ $(document).ready(function() {
     });
   });
 
+  //скрываем
+  if ($(window).width() < 767) {
+    subsubmenuList.hide().addClass('header__subsubmenu-list--hidden');
+  };
+
+  subsubmenuToggle.each(function () {
+    $(this).click(function (e) {
+      e.preventDefault();
+      $(this).toggleClass('header__subsubmenu-toggle--open');
+      $(this).parents('.header__submenu-item--parent').children('.header__subsubmenu-list').toggleClass('header__subsubmenu-list--hidden').slideToggle(500);
+    });
+  });
+
   //кнопка разворачивания прайс-листа с услугами:
   const priceListToggle = $('.services-prices__table-toggle');
 
@@ -101,7 +124,7 @@ $(document).ready(function() {
   //функция для получения ширины ячеек-заголовков таблицы и присваивания этой ширины соответствующим ячейкам ниже
   var tableCellsWidth = function (headingCells) {
     let headingCellsFiltered = headingCells.not(':last-of-type');
-    
+
     headingCellsFiltered.each(function () {
       let headingCellWidth = $(this).outerWidth();
       let className = $(this).attr('class');
@@ -111,6 +134,18 @@ $(document).ready(function() {
       tableItems.css('width', headingCellWidth);
     });
   };
+
+  servicesForm.hide();
+  servicesFormSwitch.click(function (e) {
+    e.preventDefault();
+    if (!servicesFormSwitch.hasClass('played')) {
+      servicesBanner.slideToggle(500);
+      setTimeout(function () {
+        servicesForm.slideToggle(500);
+      }, 500);
+      servicesFormSwitch.addClass('played');
+    };
+  });
 
   tableCellsWidth(tableHeading);
 
@@ -137,5 +172,18 @@ $(document).ready(function() {
         menu.removeClass('header__submenu-block--open');
       };
     };
+
+
+    if ($(window).width() >= 768) {
+      if (subsubmenuList.hasClass('header__subsubmenu-list--hidden')) {
+        subsubmenuList.show().removeClass('header__subsubmenu-list--hidden');
+        subsubmenuToggle.removeClass('header__subsubmenu-toggle--open');
+      };
+    } else {
+      if (!subsubmenuList.hasClass('header__subsubmenu-list--hidden')) {
+        subsubmenuList.hide().addClass('header__subsubmenu-list--hidden');
+      };
+    };
+
   });
 });

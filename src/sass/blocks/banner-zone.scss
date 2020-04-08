@@ -32,6 +32,25 @@
       flex-basis: 430px;
     }
   }
+
+  &--services {
+    display: flex;
+    align-items: center;
+    min-height: 600px;
+
+    & .btn {
+      width: 205px;
+    }
+
+    & .banner-zone__text-container {
+      flex-basis: 450px;
+      padding-right: 20px;
+    }
+
+    & .banner-zone__heading {
+      width: 330px;
+    }
+  }
 }
 
 .banner-zone__content {
@@ -371,6 +390,18 @@
     &--search {
       height: auto;
     }
+
+    &--services {
+      min-height: 0;
+      //
+      // & .banner-zone__text-container {
+      //     flex-basis: 200px;
+      // }
+
+      & .banner-zone__heading {
+        width: auto;
+      }
+    }
   }
 
   .banner-zone__text-container {
@@ -402,6 +433,12 @@
     &--search {
       & .banner-zone__text-container {
         flex-basis: auto;
+      }
+    }
+
+    &--services {
+      & .banner-zone__heading {
+        text-align: center;
       }
     }
   }
