@@ -135,7 +135,8 @@ $(document).ready(function() {
     });
   };
 
-  servicesForm.hide();
+  //переключение с баннера на форму записи на странице услуг
+  servicesForm.removeClass('hidden').hide();
   servicesFormSwitch.click(function (e) {
     e.preventDefault();
     if (!servicesFormSwitch.hasClass('played')) {
