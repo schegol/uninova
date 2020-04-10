@@ -482,7 +482,7 @@
   .header__subsubmenu-toggle {
     position: absolute;
     top: 50%;
-    right: calc(50% - 150px);
+    right: calc(50% - 240px);
     display: block;
     width: 30px;
     height: 30px;
@@ -597,5 +597,9 @@
 
   .header__subsubmenu-link {
     font-size: 16px;
+  }
+
+  .header__subsubmenu-toggle {
+    right: calc(50% - 155px);
   }
 }

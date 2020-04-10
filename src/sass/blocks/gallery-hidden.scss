@@ -1,0 +1,87 @@
+.gallery-hidden {
+  background-color: #fcfcfc;
+}
+
+.gallery-hidden__wrapper {
+  @include dflex(nowrap, row, space-between, stretch);
+  min-height: 480px;
+  padding: 50px;
+  background-color: #fff;
+}
+
+.gallery-hidden__controls-wrapper {
+  @include dflex(nowrap, column, flex-start, flex-start);
+  flex-basis: 250px;
+}
+
+.gallery-hidden__heading {
+  @include reset;
+  margin-bottom: 26px;
+  font-size: 34px;
+  line-height: 34px;
+  font-weight: 500;
+}
+
+.gallery-hidden__description {
+  @include reset;
+  margin-bottom: 52px;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.gallery-hidden__mode-switches {
+  @include dflex(nowrap, column, flex-start, flex-start);
+}
+
+.gallery-hidden__mode-label {
+  position: relative;
+  padding-left: 30px;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &::before {
+    @include abs-pseudo;
+    top: 2px;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background-color: #FBFBFF;
+    border: 1px solid #EAEAF5;
+    border-radius: 50%;
+  }
+
+  &::after {
+    @include abs-pseudo;
+    top: 6px;
+    left: 4px;
+    display: none;
+    width: 7px;
+    height: 7px;
+    background-color: #54D8AF;
+    border-radius: 50%;
+  }
+}
+
+.gallery-hidden__radio:checked + .gallery-hidden__mode-label {
+  font-weight: 500;
+
+  &::after {
+    display: block;
+  }
+}
+
+.gallery-hidden__pagination {
+  min-width: 170px;
+  height: 50px;
+  margin-top: auto;
+  border: 1px solid #EAEAF5;
+}
+
+.gallery-hidden__slider {
+  @include list-reset;
+}

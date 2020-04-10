@@ -11,6 +11,8 @@
   @include dflex(nowrap, column, flex-start, center);
   position: relative;
   flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
   min-height: 185px;
   background-position: center top 35px;
   background-repeat: no-repeat;
@@ -36,11 +38,13 @@
 .inner-directions__direction-name {
   @include reset;
   @include transition(color);
+  max-width: 150px;
   margin-top: 120px;
   color: $text-color;
   font-size: 18px;
   line-height: 20px;
   font-weight: normal;
+  text-align: center;
 }
 
 .inner-directions__direction-link:hover .inner-directions__direction-name,
@@ -67,6 +71,11 @@
     padding-top: 40px;
     padding-bottom: 40px;
   }
+
+  .inner-directions__direction-name {
+    font-size: 13px;
+    padding: 0 5px;
+  }
 }
 
 @media (max-width: $xs-mobile-width) {
@@ -81,7 +90,7 @@
 
   .inner-directions__direction-link {
     width: 100%;
-    min-height: 140px;
+    flex-basis: auto;
 
     &:not(:last-child) {
       &::after {
@@ -96,6 +105,8 @@
   }
 
   .inner-directions__direction-name {
+    max-width: 125px;
     margin-bottom: 20px;
+    font-size: 15px;
   }
 }

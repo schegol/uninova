@@ -135,6 +135,8 @@ $(document).ready(function() {
     });
   };
 
+  tableCellsWidth(tableHeading);
+
   //переключение с баннера на форму записи на странице услуг
   servicesForm.removeClass('hidden').hide();
   servicesFormSwitch.click(function (e) {
@@ -148,7 +150,16 @@ $(document).ready(function() {
     };
   });
 
-  tableCellsWidth(tableHeading);
+  //кнопка разворачивания текста на странице "О нас":
+  const aboutTextToggle = $('.about-hidden__heading-toggle');
+
+  //раскрытие текстов на странице "О нас"
+  aboutTextToggle.each(function () {
+    $(this).click(function () {
+      $(this).parents('.about-hidden__text-block').toggleClass('about-hidden__text-block--open');
+      $(this).parents('.about-hidden__text-block-heading').next('.about-hidden__text-block-content').slideToggle(500);
+    });
+  });
 
   $(window).resize(function () {
     tableCellsWidth(tableHeading);
