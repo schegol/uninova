@@ -24,7 +24,11 @@ $(document).ready(function() {
   //баннер на странице контактов:
   const servicesBanner = $('.banner-zone--services .banner-zone__img-container');
   //форма на странице контактов:
-  const servicesForm = $('.banner-zone--services .banner-zone__form')
+  const servicesForm = $('.banner-zone--services .banner-zone__form');
+  //Кнопка "Подробнее" на странице "О нас", открывающая скрытую информацию о компании:
+  const aboutHiddenInfoToggle = $('.banner-zone--about .banner-zone__btn');
+  //Скрытая информация о компании на странице "О нас":
+  const aboutHiddenInfo = $('#hiddenContentAbout');
 
   //размеры видимого хедера и блока раскрытого основного меню
   var headerHeight = topHeader.outerHeight();
@@ -159,6 +163,23 @@ $(document).ready(function() {
       $(this).parents('.about-hidden__text-block').toggleClass('about-hidden__text-block--open');
       $(this).parents('.about-hidden__text-block-heading').next('.about-hidden__text-block-content').slideToggle(500);
     });
+  });
+
+  //подключение сладера на странице "О нас"
+  $('.flexslider').flexslider({
+    animation: "slide",
+    controlNav: false,
+    controlsContainer: $(".gallery-hidden__arrows"),
+    customDirectionNav: $(".gallery-hidden__arrow")
+  });
+
+  //раскрытие скрытой информации на стр. "О нас"
+  aboutHiddenInfoToggle.click(function () {
+    aboutHiddenInfoToggle.fadeOut(500);
+    aboutHiddenInfo.slideToggle(500);
+    $('html, body').animate({
+        scrollTop: aboutHiddenInfo.offset().top
+    }, 500);
   });
 
   $(window).resize(function () {

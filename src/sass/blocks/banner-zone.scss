@@ -71,6 +71,16 @@
       padding-right: 20px;
     }
   }
+
+  &--about-documents {
+    display: flex;
+    align-items: center;
+    min-height: 560px;
+
+    & .banner-zone__text-container {
+      flex-basis: 330px;
+    }
+  }
 }
 
 .banner-zone__content {
@@ -176,6 +186,10 @@
   &--search {
     margin-bottom: 35px;
     padding-right: 20px;
+  }
+
+  &--about-documents {
+    margin: 0;
   }
 }
 
@@ -385,6 +399,58 @@
   margin-top: 30px;
 }
 
+.banner-zone__menu {
+  flex-basis: 670px;
+  padding: 10px;
+}
+
+.banner-zone__menu-items {
+  @include dflex(nowrap, row, flex-start, flex-start);
+  @include list-reset;
+}
+
+.banner-zone__menu-item {
+  flex-basis: 210px;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+.banner-zone__menu-link {
+  @include dflex(nowrap, column, flex-start, center);
+}
+
+.banner-zone__menu-item-icon {
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  border-radius: 40px 40px 50px 50px;
+}
+
+.banner-zone__menu-item-text {
+  @include transition(color);
+  color: $text-color;
+  text-align: center;
+  font-size: 18px;
+  line-height: 20px;
+
+  &:hover,
+  &:focus {
+    color: $text-hovered;
+  }
+}
+
+.banner-zone__menu-link:hover .banner-zone__menu-item-text,
+.banner-zone__menu-link:focus .banner-zone__menu-item-text {
+  color: $text-hovered;
+}
+
 @media (max-width: $notebook-width) {
   .banner-zone {
     &--index {
@@ -484,6 +550,10 @@
       & .banner-zone__description {
         margin: 0 0 25px;
       }
+    }
+
+    &--about-documents {
+
     }
   }
 

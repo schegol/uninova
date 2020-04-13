@@ -70,7 +70,7 @@
     text-decoration: underline;
 
     &::before {
-      background-color: #54D8AF;
+      background-color: $accent-color;
     }
   }
 }
