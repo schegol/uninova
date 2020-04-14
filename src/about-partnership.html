@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- <link rel="stylesheet" href="vendor/css/bootstrap/bootstrap-grid.min.css"> -->
+  <link rel="stylesheet" href="vendor/css/flexslider.css">
   <link rel="stylesheet" href="css/style.min.css">
   <title>Uninova</title>
 </head>
@@ -183,191 +184,103 @@
     </div>
   </header>
   <main class="main">
-    <section class="banner-zone banner-zone--search section">
+    <section class="banner-zone banner-zone--about-partnership section">
       <div class="container">
         <div class="banner-zone__content">
           <div class="banner-zone__text-container">
             <h1 class="banner-zone__heading section__heading">
-              Наши услуги
+              Сотрудничество
             </h1>
-            <p class="banner-zone__description banner-zone__description--search">
-              Текст о медицинских услугах нашей клиники который желательно уместить в три или четыре строчки краткого и содержательного текста.
+            <p class="banner-zone__description banner-zone__description--about-partnership">
+              Информация остраховых медицинских организациях, с которыми заключены договоры на оказание и оплату мед. помощи по ОМС/ДМС
             </p>
-            <a class="banner-zone__btn btn" href="contacts.html">
-              Записаться на прием
-            </a>
           </div>
-          <form class="banner-zone__form banner-zone__form--search" action="" method="get">
-            <h3 class="banner-zone__form-heading">Поиск услуги</h3>
-            <p class="banner-zone__form-description banner-zone__form-description--search">
-              Если вы знаете что вам нужно - воспользуйтесь поиском
-            </p>
-            <label class="banner-zone__input-search-label">
-              <input class="banner-zone__form-input banner-zone__form-input--search" type="text" name="date" placeholder="Начните вводить текст...">
-            </label>
-          </form>
+          <div class="banner-zone__img-container">
+            <img class="banner-zone__img" src="img/placeholder-690x400.png" alt="">
+          </div>
         </div>
       </div>
     </section>
-    <section class="services-block section">
+    <section class="partners-list section">
       <div class="container">
-        <div class="services-block__content">
-          <div class="services-block__category">
-            <h2 class="services-block__heading" style="background-image: url('../img/icon-structure-ambulant.svg');">Амбулатория</h2>
-            <ul class="services-block__list">
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 1</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 2</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 3</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 4</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 5</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 6</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 7</a>
-              </li>
-            </ul>
+        <h2 class="partners-list__heading section__heading">Наши партнеры</h2>
+        <p class="partners-list__description">
+          В данном разделе представлена информация о наших партнерах и возможностях сотрудничества
+        </p>
+        <div class="partners-list__items-wrapper">
+          <div class="partners-list__item">
+            <img class="partners-list__item-img" src="img/placeholder-partner.png" alt="">
+            <h3 class="partners-list__item-heading">Тут будет название нашего партнера</h3>
+            <a class="partners-list__item-btn btn" href="#" target="_blank">На сайт партнера</a>
           </div>
-          <div class="services-block__category">
-            <h2 class="services-block__heading" style="background-image: url('../img/icon-structure-hospital.svg');">Стационар</h2>
-            <ul class="services-block__list">
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 1</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 2</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 3</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 4</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 5</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 6</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 7</a>
-              </li>
-            </ul>
+          <div class="partners-list__item">
+            <img class="partners-list__item-img" src="img/placeholder-partner.png" alt="">
+            <h3 class="partners-list__item-heading">Тут будет название нашего партнера</h3>
+            <a class="partners-list__item-btn btn" href="#" target="_blank">На сайт партнера</a>
           </div>
-          <div class="services-block__category">
-            <h2 class="services-block__heading" style="background-image: url('../img/icon-structure-research.svg');">Центр клинических исследований</h2>
-            <ul class="services-block__list">
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 1</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 2</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 3</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 4</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 5</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 6</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 7</a>
-              </li>
-            </ul>
+          <div class="partners-list__item">
+            <img class="partners-list__item-img" src="img/placeholder-partner.png" alt="">
+            <h3 class="partners-list__item-heading">Тут будет название нашего партнера</h3>
+            <a class="partners-list__item-btn btn" href="#" target="_blank">На сайт партнера</a>
           </div>
-          <div class="services-block__category">
-            <h2 class="services-block__heading" style="background-image: url('../img/icon-structure-diagnostics.svg');">Диагностика</h2>
-            <ul class="services-block__list">
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 1</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 2</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 3</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 4</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 5</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 6</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 7</a>
-              </li>
-            </ul>
+          <div class="partners-list__item">
+            <img class="partners-list__item-img" src="img/placeholder-partner.png" alt="">
+            <h3 class="partners-list__item-heading">Тут будет название нашего партнера</h3>
+            <a class="partners-list__item-btn btn" href="#" target="_blank">На сайт партнера</a>
           </div>
-          <div class="services-block__category">
-            <h2 class="services-block__heading" style="background-image: url('../img/icon-structure-hospital.svg');">Дневной стационар</h2>
-            <ul class="services-block__list">
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 1</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 2</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 3</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 4</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 5</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 6</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 7</a>
-              </li>
-            </ul>
+          <div class="partners-list__item">
+            <img class="partners-list__item-img" src="img/placeholder-partner.png" alt="">
+            <h3 class="partners-list__item-heading">Тут будет название нашего партнера</h3>
+            <a class="partners-list__item-btn btn" href="#" target="_blank">На сайт партнера</a>
           </div>
-          <div class="services-block__category">
-            <h2 class="services-block__heading" style="background-image: url('../img/icon-structure-lab.svg');">Лаборатория</h2>
-            <ul class="services-block__list">
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 1</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 2</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 3</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 4</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 5</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 6</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 7</a>
-              </li>
-            </ul>
+          <div class="partners-list__item">
+            <img class="partners-list__item-img" src="img/placeholder-partner.png" alt="">
+            <h3 class="partners-list__item-heading">Тут будет название нашего партнера</h3>
+            <a class="partners-list__item-btn btn" href="#" target="_blank">На сайт партнера</a>
           </div>
+        </div>
+      </div>
+    </section>
+    <section class="become-partner section section--grey">
+      <div class="container">
+        <h2 class="become-partner__heading section__heading">Как стать нашим партнером</h2>
+        <h3 class="become-partner__subheading">Краткий подзаголовок данного подраздела</h3>
+        <div class="become-partner__text">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="inner-directions inner-directions--about section">
+      <h2 class="visually-hidden">Ссылки на внутренние страницы раздела</h2>
+      <div class="container">
+        <div class="inner-directions__wrapper">
+          <a class="inner-directions__direction-link" href="#" style="background-image: url('img/icon-structure-hospital.svg')">
+            <div class="inner-directions__direction">
+              <h3 class="inner-directions__direction-name">Краткая информация о клинике</h3>
+            </div>
+          </a>
+          <a class="inner-directions__direction-link" href="#" style="background-image: url('img/icon-menu-structure.svg')">
+            <div class="inner-directions__direction">
+              <h3 class="inner-directions__direction-name">Структура и направления</h3>
+            </div>
+          </a>
+          <a class="inner-directions__direction-link" href="#" style="background-image: url('img/icon-menu-documents.svg')">
+            <div class="inner-directions__direction">
+              <h3 class="inner-directions__direction-name">Лицензии и документы</h3>
+            </div>
+          </a>
+          <a class="inner-directions__direction-link" href="#" style="background-image: url('img/icon-menu-vacancies.svg')">
+            <div class="inner-directions__direction">
+              <h3 class="inner-directions__direction-name">Наши вакансии</h3>
+            </div>
+          </a>
+          <a class="inner-directions__direction-link" href="#" style="background-image: url('img/icon-menu-reviews.svg')">
+            <div class="inner-directions__direction">
+              <h3 class="inner-directions__direction-name">Отзывы о клинике</h3>
+            </div>
+          </a>
         </div>
       </div>
     </section>
@@ -422,6 +335,7 @@
   <script>focusWithin(document)</script>
   <script src="vendor/js/picturefill.min.js"></script>
   <script src="vendor/js/jquery-3.4.1.min.js"></script>
+  <script src="vendor/js/jquery.flexslider-min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

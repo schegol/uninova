@@ -1,0 +1,36 @@
+.vacancies-partnership__heading {
+  margin-bottom: 20px;
+}
+
+.vacancies-partnership__subheading {
+  @include reset;
+  margin-bottom: 40px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: normal;
+}
+
+.vacancies-partnership__text {
+  & p {
+    @include reset;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: justify;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .vacancies-partnership__subheading {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: $xs-mobile-width) {
+  .vacancies-partnership__subheading {
+    text-align: center;
+  }
+}

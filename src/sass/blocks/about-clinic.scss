@@ -1,7 +1,3 @@
-.about-clinic {
-  background-color: #fcfcfc;
-}
-
 .about-clinic__content {
   @include dflex(nowrap, row, space-between, flex-start);
 }

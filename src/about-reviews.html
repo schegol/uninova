@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- <link rel="stylesheet" href="vendor/css/bootstrap/bootstrap-grid.min.css"> -->
+  <link rel="stylesheet" href="vendor/css/flexslider.css">
   <link rel="stylesheet" href="css/style.min.css">
   <title>Uninova</title>
 </head>
@@ -183,191 +184,99 @@
     </div>
   </header>
   <main class="main">
-    <section class="banner-zone banner-zone--search section">
+    <section class="banner-zone banner-zone--about-reviews section">
       <div class="container">
         <div class="banner-zone__content">
           <div class="banner-zone__text-container">
             <h1 class="banner-zone__heading section__heading">
-              Наши услуги
+              Отзывы пациентов
             </h1>
-            <p class="banner-zone__description banner-zone__description--search">
-              Текст о медицинских услугах нашей клиники который желательно уместить в три или четыре строчки краткого и содержательного текста.
+            <p class="banner-zone__description banner-zone__description--about-reviews">
+              Краткий сопроводительный текст данного раздела с открытыми вакансиями клиники
             </p>
-            <a class="banner-zone__btn btn" href="contacts.html">
-              Записаться на прием
+            <a class="banner-zone__btn btn" href="#">
+              Оставить отзыв
             </a>
           </div>
-          <form class="banner-zone__form banner-zone__form--search" action="" method="get">
-            <h3 class="banner-zone__form-heading">Поиск услуги</h3>
-            <p class="banner-zone__form-description banner-zone__form-description--search">
-              Если вы знаете что вам нужно - воспользуйтесь поиском
-            </p>
-            <label class="banner-zone__input-search-label">
-              <input class="banner-zone__form-input banner-zone__form-input--search" type="text" name="date" placeholder="Начните вводить текст...">
-            </label>
-          </form>
+          <div class="banner-zone__reviews-container reviews-container flexslider loading">
+            <ul class="reviews-container__items slides">
+              <li class="reviews-container__item">
+                <div class="reviews-container__item-header">
+                  <span class="reviews-container__item-photo" style="background-image: url('../img/photo-review-patient.jpg')"></span>
+                  <div class="reviews-container__item-name">
+                    <span class="reviews-container__item-name-span reviews-container__item-name-span--first-name">Имя</span>
+                    <span class="reviews-container__item-name-span reviews-container__item-name-span--last-name">Фамилия</span>
+                  </div>
+                </div>
+                <p class="reviews-container__item-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna velit odio.
+                </p>
+                <a class="reviews-container__item-btn btn" href="#">Текст полностью</a>
+              </li>
+              <li class="reviews-container__item">
+                <div class="reviews-container__item-header">
+                  <span class="reviews-container__item-photo" style="background-image: url('../img/photo-review-patient.jpg')"></span>
+                  <div class="reviews-container__item-name">
+                    <span class="reviews-container__item-name-span reviews-container__item-name-span--first-name">Имя</span>
+                    <span class="reviews-container__item-name-span reviews-container__item-name-span--last-name">Фамилия</span>
+                  </div>
+                </div>
+                <p class="reviews-container__item-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna velit odio.
+                </p>
+                <a class="reviews-container__item-btn btn" href="#">Текст полностью</a>
+              </li>
+              <li class="reviews-container__item">
+                <div class="reviews-container__item-header">
+                  <span class="reviews-container__item-photo" style="background-image: url('../img/photo-review-patient.jpg')"></span>
+                  <div class="reviews-container__item-name">
+                    <span class="reviews-container__item-name-span reviews-container__item-name-span--first-name">Имя</span>
+                    <span class="reviews-container__item-name-span reviews-container__item-name-span--last-name">Фамилия</span>
+                  </div>
+                </div>
+                <p class="reviews-container__item-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna velit odio.
+                </p>
+                <a class="reviews-container__item-btn btn" href="#">Текст полностью</a>
+              </li>
+            </ul>
+            <div class="reviews-container__navigation">
+              <button class="reviews-container__arrow reviews-container__arrow--prev btn btn--arrow btn--arrow-prev"></button>
+              <button class="reviews-container__arrow reviews-container__arrow--next btn btn--arrow btn--arrow-next"></button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <section class="services-block section">
+    <section class="inner-directions inner-directions--about section">
+      <h2 class="visually-hidden">Ссылки на внутренние страницы раздела</h2>
       <div class="container">
-        <div class="services-block__content">
-          <div class="services-block__category">
-            <h2 class="services-block__heading" style="background-image: url('../img/icon-structure-ambulant.svg');">Амбулатория</h2>
-            <ul class="services-block__list">
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 1</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 2</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 3</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 4</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 5</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 6</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 7</a>
-              </li>
-            </ul>
-          </div>
-          <div class="services-block__category">
-            <h2 class="services-block__heading" style="background-image: url('../img/icon-structure-hospital.svg');">Стационар</h2>
-            <ul class="services-block__list">
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 1</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 2</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 3</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 4</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 5</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 6</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 7</a>
-              </li>
-            </ul>
-          </div>
-          <div class="services-block__category">
-            <h2 class="services-block__heading" style="background-image: url('../img/icon-structure-research.svg');">Центр клинических исследований</h2>
-            <ul class="services-block__list">
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 1</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 2</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 3</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 4</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 5</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 6</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 7</a>
-              </li>
-            </ul>
-          </div>
-          <div class="services-block__category">
-            <h2 class="services-block__heading" style="background-image: url('../img/icon-structure-diagnostics.svg');">Диагностика</h2>
-            <ul class="services-block__list">
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 1</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 2</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 3</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 4</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 5</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 6</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 7</a>
-              </li>
-            </ul>
-          </div>
-          <div class="services-block__category">
-            <h2 class="services-block__heading" style="background-image: url('../img/icon-structure-hospital.svg');">Дневной стационар</h2>
-            <ul class="services-block__list">
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 1</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 2</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 3</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 4</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 5</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 6</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 7</a>
-              </li>
-            </ul>
-          </div>
-          <div class="services-block__category">
-            <h2 class="services-block__heading" style="background-image: url('../img/icon-structure-lab.svg');">Лаборатория</h2>
-            <ul class="services-block__list">
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 1</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 2</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 3</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 4</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 5</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 6</a>
-              </li>
-              <li class="services-block__item">
-                <a class="services-block__link" href="#">Наименование услуги 7</a>
-              </li>
-            </ul>
-          </div>
+        <div class="inner-directions__wrapper">
+          <a class="inner-directions__direction-link" href="#" style="background-image: url('img/icon-structure-hospital.svg')">
+            <div class="inner-directions__direction">
+              <h3 class="inner-directions__direction-name">Краткая информация о клинике</h3>
+            </div>
+          </a>
+          <a class="inner-directions__direction-link" href="#" style="background-image: url('img/icon-menu-structure.svg')">
+            <div class="inner-directions__direction">
+              <h3 class="inner-directions__direction-name">Структура и направления</h3>
+            </div>
+          </a>
+          <a class="inner-directions__direction-link" href="#" style="background-image: url('img/icon-menu-documents.svg')">
+            <div class="inner-directions__direction">
+              <h3 class="inner-directions__direction-name">Лицензии и документы</h3>
+            </div>
+          </a>
+          <a class="inner-directions__direction-link" href="#" style="background-image: url('img/icon-menu-partnership.svg')">
+            <div class="inner-directions__direction">
+              <h3 class="inner-directions__direction-name">Сотрудничество с нами</h3>
+            </div>
+          </a>
+          <a class="inner-directions__direction-link" href="#" style="background-image: url('img/icon-menu-vacancies.svg')">
+            <div class="inner-directions__direction">
+              <h3 class="inner-directions__direction-name">Наши вакансии</h3>
+            </div>
+          </a>
         </div>
       </div>
     </section>
@@ -422,6 +331,7 @@
   <script>focusWithin(document)</script>
   <script src="vendor/js/picturefill.min.js"></script>
   <script src="vendor/js/jquery-3.4.1.min.js"></script>
+  <script src="vendor/js/jquery.flexslider-min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

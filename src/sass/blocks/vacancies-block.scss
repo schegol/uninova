@@ -1,0 +1,78 @@
+.vacancies-block__items-list {
+  @include dflex(nowrap, row, flex-start, flex-start);
+  margin-right: -45px;
+  margin-left: -45px;
+}
+
+.vacancies-block__item {
+  @include dflex(nowrap, column, flex-start, flex-start);
+  margin: 0 45px 50px;
+}
+
+.vacancies-block__item-date {
+  margin-bottom: 14px;
+  color: $main-color;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: bold;
+}
+
+.vacancies-block__item-heading {
+  @include reset;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  border-bottom: 1px solid #efefff;
+}
+
+.vacancies-block__item-subheading {
+  @include reset;
+  margin-bottom: 25px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.vacancies-block__item-text {
+  @include reset;
+  margin-bottom: 25px;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.vacancies-block__item-btn {
+  min-width: 140px;
+}
+
+@media (max-width: $tablet-width) {
+  .vacancies-block__items-list {
+    margin-right: -30px;
+    margin-left: -30px;
+  }
+
+  .vacancies-block__item {
+    margin: 0 30px 40px;
+  }
+
+  .vacancies-block__item-heading {
+    font-size: 22px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .vacancies-block__items-list {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .vacancies-block__item {
+    margin: 0 0 50px;
+
+    &:last-child {
+      margin-bottom: 20px;
+    }
+  }
+}

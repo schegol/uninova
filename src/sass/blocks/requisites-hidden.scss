@@ -1,0 +1,31 @@
+.requisites-hidden {
+  &--company {
+    padding-bottom: 45px;
+  }
+
+  &--bank {
+    padding-top: 45px;
+    padding-bottom: 60px;
+  }
+}
+
+.requisites-hidden__description {
+  @include reset;
+  margin-bottom: 45px;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.requisites-hidden__item {
+  @include reset;
+  font-size: 16px;
+  line-height: 16px;
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+.requisites-hidden__item-heading {
+  font-weight: 500;
+}

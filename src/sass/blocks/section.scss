@@ -2,6 +2,10 @@
   padding-top: 80px;
   padding-bottom: 65px;
   border-bottom: 1px solid #eeeeff;
+
+  &--grey {
+    background-color: #fcfcfc;
+  }
 }
 
 .section__heading {
@@ -35,5 +39,6 @@
     margin-bottom: 20px;
     font-size: 25px;
     line-height: 25px;
+    text-align: center;
   }
 }

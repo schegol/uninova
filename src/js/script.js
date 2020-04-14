@@ -29,6 +29,10 @@ $(document).ready(function() {
   const aboutHiddenInfoToggle = $('.banner-zone--about .banner-zone__btn');
   //Скрытая информация о компании на странице "О нас":
   const aboutHiddenInfo = $('#hiddenContentAbout');
+  //ссылки на скрытые разделы на странице "Лицензии и документы":
+  const documentsHiddenInfoToggles = $('.banner-zone--about-documents .banner-zone__menu-link');
+  //Скрытые разделы на странице "Лицензии и документы":
+  const documentsHiddenInfo = $('.hidden-content--documents');
 
   //размеры видимого хедера и блока раскрытого основного меню
   var headerHeight = topHeader.outerHeight();
@@ -165,21 +169,54 @@ $(document).ready(function() {
     });
   });
 
-  //подключение сладера на странице "О нас"
-  $('.flexslider').flexslider({
-    animation: "slide",
-    controlNav: false,
-    controlsContainer: $(".gallery-hidden__arrows"),
-    customDirectionNav: $(".gallery-hidden__arrow")
-  });
-
   //раскрытие скрытой информации на стр. "О нас"
   aboutHiddenInfoToggle.click(function () {
     aboutHiddenInfoToggle.fadeOut(500);
-    aboutHiddenInfo.slideToggle(500);
+    aboutHiddenInfo.slideDown(500);
+    //подключение сладера на странице "О нас"
+    $('.gallery-hidden__slides-wrapper.flexslider').flexslider({
+      animation: 'slide',
+      controlNav: false,
+      customDirectionNav: $('.gallery-hidden__arrow'),
+      useCSS: false
+    });
     $('html, body').animate({
         scrollTop: aboutHiddenInfo.offset().top
     }, 500);
+  });
+
+  //подключение сладера на странице "Отзывы"
+  $('.reviews-container.flexslider').flexslider({
+    animation: 'slide',
+    controlNav: false,
+    customDirectionNav: $('.reviews-container__arrow'),
+    itemWidth: 350,
+    itemMargin: 80,
+    animationLoop: true,
+    slideshow: false,
+    useCSS: false
+  }).removeClass('loading');
+
+  //раскрытие скрытой информации на стр. "Лицензии и документы"
+  documentsHiddenInfoToggles.each(function () {
+    $(this).click(function (e) {
+      e.preventDefault();
+      var href = $(this).attr('href').replace('#', '');
+      documentsHiddenInfo.each(function () {
+        if ($(this).attr('id') == href) {
+          $(this).addClass('active');
+          $(this).slideDown(300);
+        } else {
+          $(this).removeClass('active');
+          $(this).slideUp(300);
+        };
+      });
+      setTimeout(function () {
+        $('html, body').animate({
+            scrollTop: $('.hidden-content--documents.active').offset().top
+        }, 300);
+      }, 300);
+    });
   });
 
   $(window).resize(function () {
