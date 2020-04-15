@@ -6,15 +6,6 @@
   background: transparent;
   border: none;
   border-radius: 0;
-
-  &.loading {
-    opacity: 0;
-  }
-}
-
-.reviews-container .flex-viewport {
-  width: 100% !important;
-  max-width: 450px !important;
 }
 
 .reviews-container__navigation {
@@ -45,12 +36,15 @@
   width: 450px;
   padding: 50px;
   background-color: #fff;
+
+  &.loading {
+    opacity: 0;
+  }
 }
 
 .reviews-container__item {
   @include dflex(nowrap, column, flex-start, flex-start);
   display: flex !important;
-  width: 350px !important;
 }
 
 .reviews-container__item-header {
@@ -102,6 +96,7 @@
   }
 
   .reviews-container__items {
+    width: 100%;
     padding-top: 30px;
     padding-bottom: 30px;
   }

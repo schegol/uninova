@@ -1,0 +1,126 @@
+.directions {
+  @include dflex(nowrap, column, flex-start, stretch);
+}
+
+.directions__text-container {
+  flex-basis: auto;
+}
+
+.directions__heading {
+  @include reset;
+  margin-bottom: 20px;
+}
+
+.directions__description {
+  @include reset;
+  margin-bottom: 40px;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+
+.directions__items-container {
+  @include dflex(nowrap, row, flex-start, flex-start);
+  margin-right: -45px;
+  margin-left: -45px;
+}
+
+.directions__direction {
+  flex-basis: 330px;
+  margin-right: 45px;
+  margin-left: 45px;
+}
+
+
+.directions__direction-link {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.directions__direction-heading {
+  @include reset;
+  margin-bottom: 15px;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.directions__direction-description {
+  @include reset;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+@media (max-width: $notebook-width) {
+  .directions__items-container {
+    margin-right: -30px;
+    margin-left: -30px;
+  }
+
+  .directions__direction {
+    flex-basis: calc(33.3333% - 60px);
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+
+  .directions__direction-img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .directions__description {
+    margin-bottom: 30px;
+  }
+
+  .directions__items-container {
+    margin-right: -20px;
+    margin-left: -20px;
+  }
+
+  .directions__direction {
+    flex-basis: calc(33.3333% - 40px);
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .directions__direction-description {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+    .directions__items-container {
+      margin-right: -10px;
+      margin-left: -10px;
+    }
+
+    .directions__direction {
+      flex-basis: calc(33.3333% - 20px);
+      margin-right: 10px;
+      margin-left: 10px;
+      text-align: center;
+    }
+}
+
+@media (max-width: $xs-mobile-width) {
+  .directions__items-container {
+    flex-direction: column;
+  }
+
+  .directions__direction {
+    // @include dflex(nowrap, row, space-between, flex-start);
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .directions__direction-link {
+    flex-basis: 50%;
+    flex-shrink: 0;
+    margin-right: 10px;
+  }
+}

@@ -174,11 +174,12 @@ $(document).ready(function() {
     aboutHiddenInfoToggle.fadeOut(500);
     aboutHiddenInfo.slideDown(500);
     //подключение сладера на странице "О нас"
-    $('.gallery-hidden__slides-wrapper.flexslider').flexslider({
-      animation: 'slide',
-      controlNav: false,
-      customDirectionNav: $('.gallery-hidden__arrow'),
-      useCSS: false
+    $('.gallery--hidden .gallery__slider').slick({
+      prevArrow: $('.gallery--hidden .gallery__arrow--prev'),
+      nextArrow: $('.gallery--hidden .gallery__arrow--next'),
+      autoPlay: true,
+      adaptiveHeight: true,
+      respondTo: 'slider'
     });
     $('html, body').animate({
         scrollTop: aboutHiddenInfo.offset().top
@@ -186,16 +187,22 @@ $(document).ready(function() {
   });
 
   //подключение сладера на странице "Отзывы"
-  $('.reviews-container.flexslider').flexslider({
-    animation: 'slide',
-    controlNav: false,
-    customDirectionNav: $('.reviews-container__arrow'),
-    itemWidth: 350,
-    itemMargin: 80,
-    animationLoop: true,
-    slideshow: false,
-    useCSS: false
+  $('.reviews-container__items').slick({
+    prevArrow: $('.reviews-container__arrow--prev'),
+    nextArrow: $('.reviews-container__arrow--next'),
+    autoPlay: true,
+    adaptiveHeight: true,
+    respondTo: 'slider'
   }).removeClass('loading');
+
+  //подключение сладера на странице "Структура/Наши сотрудники"
+  $('.gallery--doctors .gallery__slider').slick({
+    prevArrow: $('.gallery--doctors .gallery__arrow--prev'),
+    nextArrow: $('.gallery--doctors .gallery__arrow--next'),
+    autoPlay: true,
+    adaptiveHeight: true,
+    respondTo: 'slider'
+  });
 
   //раскрытие скрытой информации на стр. "Лицензии и документы"
   documentsHiddenInfoToggles.each(function () {

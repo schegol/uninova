@@ -108,6 +108,29 @@
       min-width: 155px;
     }
   }
+
+  &--about-directions {
+    padding-top: 80px;
+    padding-bottom: 65px;
+  }
+
+  &--about-doctors {
+    padding-top: 85px;
+    padding-bottom: 85px;
+
+    & .banner-zone__heading {
+      margin-bottom: 25px;
+    }
+
+    & .banner-zone__text-container {
+      flex-basis: 385px;
+      padding-right: 10px;
+    }
+
+    & .banner-zone__btn {
+      min-width: 145px;
+    }
+  }
 }
 
 .banner-zone__content {
@@ -217,6 +240,10 @@
 
   &--about-documents {
     margin: 0;
+  }
+
+  &--about-doctors {
+    margin-bottom: 40px;
   }
 }
 
@@ -429,11 +456,22 @@
 .banner-zone__menu {
   flex-basis: 670px;
   padding: 10px;
+
+  &--doctors-page {
+    flex-basis: 690px;
+    padding: 0;
+  }
 }
 
 .banner-zone__menu-items {
   @include dflex(nowrap, row, flex-start, flex-start);
   @include list-reset;
+
+  &--doctors-page {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: -40px;
+  }
 }
 
 .banner-zone__menu-item {
@@ -441,6 +479,15 @@
 
   &:not(:last-child) {
     margin-right: 20px;
+  }
+
+  &--doctors-page {
+    margin-right: 0;
+    margin-bottom: 40px;
+
+    &:not(:last-child) {
+      margin-right: 0;
+    }
   }
 }
 
@@ -498,6 +545,18 @@
   .banner-zone__img {
     width: 600px;
   }
+
+  .banner-zone__menu {
+    &--doctors-page {
+      flex-basis: 620px;
+    }
+  }
+
+  .banner-zone__menu-item {
+    &--doctors-page {
+      flex-basis: 180px;
+    }
+  }
 }
 
 @media (max-width: $tablet-width) {
@@ -540,6 +599,39 @@
   .banner-zone__form {
     flex-basis: 60%;
     padding: 25px;
+  }
+
+  .banner-zone__direction-link {
+    margin-bottom: 20px;
+  }
+
+  .banner-zone__direction-heading {
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  .banner-zone__direction-description {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .banner-zone__menu {
+    &--doctors-page {
+      flex-basis: 550px;
+    }
+  }
+
+  .banner-zone__menu-items {
+    &--doctors-page {
+      margin-bottom: -20px;
+    }
+  }
+
+  .banner-zone__menu-item {
+    &--doctors-page {
+      flex-basis: 140px;
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -616,6 +708,26 @@
         margin-bottom: 20px;
       }
     }
+
+    &--about-directions {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    &--about-doctors {
+      padding-top: 50px;
+      padding-bottom: 50px;
+
+      & .banner-zone__text-container {
+        flex-basis: auto;
+        margin-bottom: 40px;
+        padding-right: 0;
+      }
+
+      & .banner-zone__content {
+        flex-direction: column;
+      }
+    }
   }
 
   .banner-zone__heading {
@@ -687,6 +799,20 @@
 
   .banner-zone__menu {
     padding: 0;
+
+    &--doctors-page {
+      flex-basis: auto;
+    }
+  }
+
+  .banner-zone__menu-items {
+    &--doctors-page {
+      justify-content: space-around;
+    }
+  }
+
+  .banner-zone__menu-item {
+    flex-basis: 30%;
   }
 
   .banner-zone__menu-item-text {
@@ -711,9 +837,13 @@
     align-self: center;
   }
 
+  .banner-zone__menu-items {
+    justify-content: space-between;
+  }
+
   .banner-zone__menu-item {
     &:not(:last-child) {
-      margin-right: 5px;
+      margin-right: 0;
     }
   }
 
