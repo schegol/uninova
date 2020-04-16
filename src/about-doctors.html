@@ -302,17 +302,17 @@
             <a class="gallery__btn gallery__btn--doctors btn" href="#">
               Посмотреть всех
             </a>
-            <div class="gallery__mode-switches">
-              <input class="gallery__radio visually-hidden-input" id="clinicPhotos" type="radio" name="mode-switches" checked value="clinicPhotos">
-              <label for="clinicPhotos" class="gallery__mode-label">
+            <div class="gallery__mode-switches gallery__mode-switches--doctors">
+              <input class="gallery__radio visually-hidden-input" id="headPhotos" type="radio" name="doctor-switches" checked value="headPhotos">
+              <label for="headPhotos" class="gallery__mode-label">
                 Руководители и ведущие сотрудники
               </label>
-              <input class="gallery__radio visually-hidden-input" id="eventPhotos" type="radio" name="mode-switches" value="eventPhotos">
-              <label for="eventPhotos" class="gallery__mode-label">
+              <input class="gallery__radio visually-hidden-input" id="docPhotos" type="radio" name="doctor-switches" value="docPhotos">
+              <label for="docPhotos" class="gallery__mode-label">
                 Ведущие врачи
               </label>
-              <input class="gallery__radio visually-hidden-input" id="morePhotos" type="radio" name="mode-switches" value="morePhotos">
-              <label for="morePhotos" class="gallery__mode-label">
+              <input class="gallery__radio visually-hidden-input" id="staffPhotos" type="radio" name="doctor-switches" value="staffPhotos">
+              <label for="staffPhotos" class="gallery__mode-label">
                 Медицинский персонал
               </label>
             </div>
@@ -328,13 +328,45 @@
             </div>
           </div>
           <div class="gallery__slides-wrapper gallery__slides-wrapper--doctors">
-            <h2 class="gallery__heading gallery__heading--mobile section__heading">>Наши сотрудники</h2>
+            <h2 class="gallery__heading gallery__heading--mobile section__heading">Наши сотрудники</h2>
             <div class="gallery__slider">
               <div class="gallery__slide gallery__slide--doctors">
-                <img class="gallery__slide-img" src="img/placeholder-640x380.png" alt="">
+                <div class="gallery__slide-content-info">
+                  <div class="gallery__slide-content-text">
+                    <div class="gallery__slide-content-head">
+                      <h3 class="gallery__doctor-name">Фамилия Имя Отчество</h3>
+                      <span class="gallery__doctor-position">должность</span>
+                    </div>
+                    <div class="gallery__slide-content-body">
+                      <h4 class="gallery__doctor-schedule">График работы и часы приема:</h4>
+                      <p class="gallery__doctor-workhours">
+                        Пн-Ср: с 12:00 до 18:00<br>
+                        По субботам: с 10:00 до 16:00
+                      </p>
+                      <a class="gallery__doctor-appoint-btn btn" href="#">Записаться</a>
+                    </div>
+                  </div>
+                </div>
+                <img class="gallery__slide-content-photo" src="img/doctor-big.png" alt="">
               </div>
               <div class="gallery__slide gallery__slide--doctors">
-                <img class="gallery__slide-img" src="img/placeholder-640x380.png" alt="">
+                <div class="gallery__slide-content-info">
+                  <div class="gallery__slide-content-text">
+                    <div class="gallery__slide-content-head">
+                      <h3 class="gallery__doctor-name">Фамилия Имя Отчество</h3>
+                      <span class="gallery__doctor-position">должность</span>
+                    </div>
+                    <div class="gallery__slide-content-body">
+                      <h4 class="gallery__doctor-schedule">График работы и часы приема:</h4>
+                      <p class="gallery__doctor-workhours">
+                        Пн-Ср: с 12:00 до 18:00<br>
+                        По субботам: с 10:00 до 16:00
+                      </p>
+                      <a class="gallery__doctor-appoint-btn btn" href="#">Записаться</a>
+                    </div>
+                  </div>
+                </div>
+                <img class="gallery__slide-content-photo" src="img/doctor-big.png" alt="">
               </div>
             </ul>
           </div>

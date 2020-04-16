@@ -1,6 +1,7 @@
 .gallery {
-  padding-top: 30px;
-  padding-bottom: 0;
+  &--doctors {
+    padding: 0;
+  }
 }
 
 .gallery__wrapper {
@@ -24,6 +25,8 @@
   &--doctors {
     flex-basis: 320px;
     min-height: 420px;
+    padding-top: 106px;
+    padding-bottom: 130px;
   }
 }
 
@@ -39,7 +42,7 @@
   }
 
   &--doctors {
-    margin-bottom: 40px;
+    margin-bottom: 19px;
   }
 }
 
@@ -162,9 +165,121 @@
   width: 640px !important;
 
   &--doctors {
+    position: relative;
     width: 810px !important;
-    height: 630px;
+    height: 660px;
   }
+}
+
+.gallery__slide-content-info {
+  @include dflex(nowrap, row, flex-end, center);
+  position: relative;
+  margin-top: 106px;
+  padding: 70px 60px 65px 480px;
+  background-color: #fff;
+
+  &::before {
+    @include abs-pseudo;
+    top: 50%;
+    left: 65px;
+    width: 330px;
+    height: 330px;
+    background-color: #f7f7ff;
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    @include abs-pseudo;
+    top: 50%;
+    left: 125px;
+    width: 210px;
+    height: 210px;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.gallery__slide-content-photo {
+  position: absolute;
+  bottom: 0;
+  left: 40px;
+}
+
+.gallery__slide-content-text {
+  flex-basis: 280px;
+}
+
+.gallery__slide-content-head {
+  position: relative;
+  margin-bottom: 35px;
+  padding-bottom: 35px;
+  z-index: 1;
+
+  &::after {
+    @include abs-pseudo;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      $accent-color 0,
+      $accent-color 10%,
+      #efefff 10%,
+      #efefff 100%
+    );
+  }
+}
+
+.gallery__slide-content-body {
+  position: relative;
+  padding-left: 40px;
+  z-index: 1;
+
+  &::before {
+    @include abs-pseudo;
+    top: -2px;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    background-image: url("../img/icon-doctor-clock.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+.gallery__doctor-name {
+  @include reset;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.gallery__doctor-position {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.gallery__doctor-schedule {
+  @include reset;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.gallery__doctor-workhours {
+  @include reset;
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.gallery__doctor-appoint-btn {
+  width: 130px;
 }
 
 @media (max-width: $notebook-width) {
@@ -172,16 +287,49 @@
     min-height: 0;
   }
 
-  .gallery__slides-wrapper .flex-viewport {
-    width: 600px;
+  .gallery__controls-wrapper {
+    &--doctors {
+      padding-bottom: 0;
+    }
   }
 
   .gallery__slide {
     width: 600px !important;
+
+    &--doctors {
+      width: 100% !important;
+    }
+  }
+
+  .gallery__slide-content-info {
+    padding-left: 360px;
+
+    &::before {
+      left: 70px;
+      width: 280px;
+      height: 280px;
+    }
+
+    &::after {
+      left: 120px;
+      width: 180px;
+      height: 180px;
+    }
+  }
+
+  .gallery__slide-content-photo {
+    left: 10px;
   }
 }
 
 @media (max-width: $tablet-width) {
+  .gallery {
+    &--doctors {
+      padding-top: 55px;
+      padding-bottom: 40px;
+    }
+  }
+
   .gallery__heading {
     &--desktop {
       display: none;
@@ -192,9 +340,19 @@
     }
   }
 
+  .gallery--doctors .gallery__heading--mobile {
+    margin-bottom: 20px;
+    font-size: 28px;
+    line-height: 28px;
+  }
+
   .gallery__wrapper {
     flex-direction: column-reverse;
     padding: 20px;
+
+    &--doctors {
+      padding: 0;
+    }
   }
 
   .gallery__slides-wrapper {
@@ -206,12 +364,12 @@
     width: 100%;
   }
 
-  .gallery__slides-wrapper .flex-viewport {
-    width: calc(100vw - 70px);
-  }
-
   .gallery__slide {
     width: calc(100vw - 70px) !important;
+
+    &--doctors {
+      height: auto;
+    }
   }
 
   .gallery__controls-wrapper {
@@ -220,15 +378,72 @@
     justify-content: space-between;
     flex-basis: auto;
     margin: 0;
+
+    &--doctors {
+      flex-direction: column-reverse;
+      min-height: 0;
+      padding-top: 0;
+    }
+  }
+
+  .gallery__btn {
+    &--doctors {
+      margin-bottom: 20px;
+    }
   }
 
   .gallery__description {
     flex-basis: 100%;
     margin-bottom: 20px;
+
+    &--doctors {
+      margin-bottom: 0;
+    }
+  }
+
+  .gallery__mode-switches {
+    &--doctors {
+      margin-bottom: 20px;
+    }
   }
 
   .gallery__pagination {
     margin-top: 0;
+
+    &--doctors {
+      margin-bottom: 20px;
+    }
+  }
+
+  .gallery__slide-content-info {
+    margin-top: 50px;
+    padding: 15px;
+
+    &::before {
+      left: 25%;
+      width: 250px;
+      height: 250px;
+      transform: translate(-50%, -50%);
+    }
+
+    &::after {
+      left: 25%;
+      width: 160px;
+      height: 160px;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .gallery__slide-content-photo {
+    left: 25%;
+    max-width: 50%;
+    width: auto !important;
+    max-height: 100%;
+    transform: translateX(-50%);
+  }
+
+  .gallery__slide-content-text {
+    flex-basis: 50%;
   }
 }
 
@@ -242,23 +457,115 @@
     background-color: transparent;
   }
 
-  .gallery__slides-wrapper .flex-viewport {
-    width: calc(100vw - 20px);
-  }
-
   .gallery__slide {
     width: calc(100vw - 20px) !important;
   }
 }
 
 @media (max-width: $xs-mobile-width) {
+  .gallery {
+    &--doctors {
+      padding-bottom: 25px;
+    }
+  }
+
   .gallery__controls-wrapper {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: flex-start;
+
+    &--doctors {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .gallery--doctors .gallery__heading--mobile {
+    display: block;
+    margin: 0 auto 20px;
+    font-size: 25px;
+    line-height: 25px;
   }
 
   .gallery__pagination {
     margin-top: 20px;
+
+    &--doctors {
+      margin-top: 0;
+    }
+  }
+
+  .gallery__slide-content-photo {
+    max-width: 150px;
+  }
+
+  .gallery__slide-content-info {
+    margin-top: 0;
+    overflow: hidden;
+
+    &::before {
+      display: none;
+      // top: -150px;
+      // right: -150px;
+      // left: auto;
+      // width: 300px;
+      // height: 300px;
+      // transform: none;
+    }
+
+    &::after {
+      display: none;
+      // top: -96px;
+      // right: -960px;
+      // left: auto;
+      // width: 192px;
+      // height: 192px;
+      // transform: none;
+    }
+  }
+
+  .gallery__slide-content-text {
+    flex-basis: 100%;
+  }
+
+  .gallery__slide-content-head {
+    margin-bottom: 50px;
+    padding: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .gallery__slide-content-body {
+    width: 50%;
+    margin-left: auto;
+    padding: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .gallery__doctor-name {
+    text-align: center;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .gallery__doctor-position {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .gallery__doctor-schedule {
+    margin-bottom: 12px;
+  }
+
+  .gallery__doctor-workhours {
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 20px;
   }
 }
