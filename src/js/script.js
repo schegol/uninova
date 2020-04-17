@@ -204,6 +204,47 @@ $(document).ready(function() {
     respondTo: 'slider'
   });
 
+  //подключение сладера на странице "Все врачи"
+  $('.doctors-block__list').slick({
+    prevArrow: $('.doctors-block__navigation .nav-block__navigation-arrow--prev'),
+    nextArrow: $('.doctors-block__navigation .nav-block__navigation-arrow--next'),
+    autoPlay: true,
+    adaptiveHeight: true,
+    respondTo: 'slider',
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 575,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+
   //раскрытие скрытой информации на стр. "Лицензии и документы"
   documentsHiddenInfoToggles.each(function () {
     $(this).click(function (e) {

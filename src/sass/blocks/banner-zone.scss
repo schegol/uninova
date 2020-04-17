@@ -131,6 +131,41 @@
       min-width: 145px;
     }
   }
+
+  &--doctors-section {
+    background-color: #fff;
+    background-image: none;
+
+    & .banner-zone__text-container {
+      flex-basis: 330px;
+      padding-right: 10px;
+    }
+  }
+
+  &--doctors-detailed {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  &--researches {
+    & .banner-zone__text-container {
+      flex-basis: 440px;
+      padding-right: 10px;
+    }
+
+    & .banner-zone__heading {
+      margin-bottom: 30px;
+    }
+
+    & .banner-zone__btn {
+      min-width: 175px;
+    }
+  }
+
+  &--open-researches {
+    @include dflex(nowrap, row, center, center);
+    min-height: 400px;
+  }
 }
 
 .banner-zone__content {
@@ -244,6 +279,14 @@
 
   &--about-doctors {
     margin-bottom: 40px;
+  }
+
+  &--researches {
+    margin-bottom: 30px;
+  }
+
+  &--open-researches {
+    margin-bottom: 0;
   }
 }
 
@@ -530,7 +573,7 @@
   .banner-zone {
     &--index {
       @include dflex(nowrap, row, center, center);
-      min-height: 500px;
+      min-height: 350px;
     }
 
     &--contacts {
@@ -581,6 +624,25 @@
     &--about {
       min-height: 0;
     }
+
+    &--doctors-section {
+      & .banner-zone__text-container {
+        flex-basis: auto;
+        padding-right: 0;
+      }
+
+      & .banner-zone__mode-switches {
+        align-self: flex-start;
+      }
+    }
+
+    &--open-researches {
+      min-height: 350px;
+
+      & .banner-zone__text-container {
+         flex-basis: 330px;
+      }
+    }
   }
 
   .banner-zone__text-container {
@@ -618,6 +680,10 @@
   .banner-zone__menu {
     &--doctors-page {
       flex-basis: 550px;
+    }
+
+    &--open-researches {
+      flex-basis: 670px;
     }
   }
 
@@ -728,6 +794,25 @@
         flex-direction: column;
       }
     }
+
+    &--researches {
+      & .banner-zone__text-container {
+        flex-basis: auto;
+      }
+    }
+
+    &--open-researches {
+      min-height: 0;
+
+      & .banner-zone__content {
+         flex-direction: column;
+      }
+
+      & .banner-zone__text-container {
+        flex-basis: auto;
+        margin-bottom: 20px;
+      }
+    }
   }
 
   .banner-zone__heading {
@@ -803,6 +888,10 @@
     &--doctors-page {
       flex-basis: auto;
     }
+
+    &--open-researches {
+      flex-basis: auto;
+    }
   }
 
   .banner-zone__menu-items {
@@ -839,6 +928,10 @@
 
   .banner-zone__menu-items {
     justify-content: space-between;
+  }
+
+  .banner-zone__menu {
+    width: 100%;
   }
 
   .banner-zone__menu-item {

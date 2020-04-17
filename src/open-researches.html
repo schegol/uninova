@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- <link rel="stylesheet" href="vendor/css/bootstrap/bootstrap-grid.min.css"> -->
-  <!-- <link rel="stylesheet" href="vendor/css/flexslider.css"> -->
-  <link rel="stylesheet" href="vendor/css/slick.css">
   <link rel="stylesheet" href="css/style.min.css">
   <title>Uninova</title>
 </head>
@@ -185,56 +183,35 @@
     </div>
   </header>
   <main class="main">
-    <section class="banner-zone banner-zone--about-doctors section">
+    <section class="banner-zone banner-zone--open-researches section">
       <div class="container">
         <div class="banner-zone__content">
           <div class="banner-zone__text-container">
             <h1 class="banner-zone__heading section__heading">
-              Структура клиники
+              Клинические исследования
             </h1>
-            <p class="banner-zone__description banner-zone__description--about-doctors">
-              Краткий сопроводительный текст который желательно уместить в три строчки текста
+            <p class="banner-zone__description banner-zone__description--open-researches">
+              Краткий сопроводительный текст который желательно уместить в три строчки конструктивного текста
             </p>
-            <button class="banner-zone__btn btn" type="button">
-              Подробнее
-            </button>
           </div>
-          <div class="banner-zone__menu banner-zone__menu--doctors-page">
-            <ul class="banner-zone__menu-items banner-zone__menu-items--doctors-page">
-              <li class="banner-zone__menu-item banner-zone__menu-item--doctors-page">
-                <a class="banner-zone__menu-link" href="#">
-                  <span class="banner-zone__menu-item-icon" style="background-image: url('img/icon-structure-ambulant.svg')"></span>
-                  <span class="banner-zone__menu-item-text">Амбулатория</span>
+          <div class="banner-zone__menu banner-zone__menu--open-researches">
+            <ul class="banner-zone__menu-items">
+              <li class="banner-zone__menu-item">
+                <a class="banner-zone__menu-link" href="#oncology">
+                  <span class="banner-zone__menu-item-icon" style="background-image: url('img/icon-research-oncology.svg')"></span>
+                  <span class="banner-zone__menu-item-text">Онкология</span>
                 </a>
               </li>
-              <li class="banner-zone__menu-item banner-zone__menu-item--doctors-page">
-                <a class="banner-zone__menu-link" href="#">
-                  <span class="banner-zone__menu-item-icon" style="background-image: url('img/icon-structure-hospital.svg')"></span>
-                  <span class="banner-zone__menu-item-text">Стационар</span>
+              <li class="banner-zone__menu-item">
+                <a class="banner-zone__menu-link" href="#rheumatology">
+                  <span class="banner-zone__menu-item-icon" style="background-image: url('img/icon-research-rheumatology.svg')"></span>
+                  <span class="banner-zone__menu-item-text">Ревматология</span>
                 </a>
               </li>
-              <li class="banner-zone__menu-item banner-zone__menu-item--doctors-page">
-                <a class="banner-zone__menu-link" href="#">
-                  <span class="banner-zone__menu-item-icon" style="background-image: url('img/icon-structure-research.svg')"></span>
-                  <span class="banner-zone__menu-item-text">Центр клинических исследований</span>
-                </a>
-              </li>
-              <li class="banner-zone__menu-item banner-zone__menu-item--doctors-page">
-                <a class="banner-zone__menu-link" href="#">
-                  <span class="banner-zone__menu-item-icon" style="background-image: url('img/icon-structure-diagnostics.svg')"></span>
-                  <span class="banner-zone__menu-item-text">Диагностика</span>
-                </a>
-              </li>
-              <li class="banner-zone__menu-item banner-zone__menu-item--doctors-page">
-                <a class="banner-zone__menu-link" href="#">
-                  <span class="banner-zone__menu-item-icon" style="background-image: url('img/icon-structure-hospital.svg')"></span>
-                  <span class="banner-zone__menu-item-text">Дневной стационар</span>
-                </a>
-              </li>
-              <li class="banner-zone__menu-item banner-zone__menu-item--doctors-page">
-                <a class="banner-zone__menu-link" href="#">
-                  <span class="banner-zone__menu-item-icon" style="background-image: url('img/icon-structure-lab.svg')"></span>
-                  <span class="banner-zone__menu-item-text">Лаборатория</span>
+              <li class="banner-zone__menu-item">
+                <a class="banner-zone__menu-link" href="#dermatology">
+                  <span class="banner-zone__menu-item-icon" style="background-image: url('img/icon-research-dermatology.svg')"></span>
+                  <span class="banner-zone__menu-item-text">Дерматология</span>
                 </a>
               </li>
             </ul>
@@ -242,169 +219,91 @@
         </div>
       </div>
     </section>
-    <section class="directions-section section">
-      <div class="container">
-        <div class="directions directions--doctors">
-          <div class="directions__text-container">
-            <h2 class="directions__heading section__heading">
-              Направления клиники
-            </h2>
-            <p class="directions__description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit
-            </p>
-          </div>
-          <div class="directions__items-container">
-            <div class="directions__direction">
-              <a class="directions__direction-link" href="#">
-                <img class="directions__direction-img" src="img/placeholder-330x260.png" alt="">
-              </a>
-              <div class="directions__direction-text">
-                <h2 class="directions__direction-heading">Онкология</h2>
-                <p class="directions__direction-description">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.
-                </p>
+    <div class="hidden-content hidden-content--researches hidden-content--researches-oncology" id="oncology">
+      <section class="researches-hidden section">
+        <div class="container">
+          <div class="researches-hidden__wrapper">
+            <div class="researches-hidden__filter-block">
+              <h2 class="researches-hidden__filter-heading">Фильтрация</h2>
+              <div class="researches-hidden__status-switches mode-switches mode-switches--researches-status">
+                <input class="mode-switches__radio visually-hidden-input" id="allStatuses" type="radio" name="mode-switches-status" checked value="allStatuses">
+                <label class="mode-switches__mode-label" for="allStatuses">
+                  Все
+                </label>
+                <input class="mode-switches__radio visually-hidden-input" id="open" type="radio" name="mode-switches-status" value="open">
+                <label class="mode-switches__mode-label" for="open">
+                  Идет набор
+                </label>
+                <input class="mode-switches__radio visually-hidden-input" id="closed" type="radio" name="mode-switches-status" value="closed">
+                <label class="mode-switches__mode-label" for="closed">
+                  Ожидается набор
+                </label>
               </div>
             </div>
-            <div class="directions__direction">
-              <a class="directions__direction-link" href="#">
-                <img class="directions__direction-img" src="img/placeholder-330x260.png" alt="">
-              </a>
-              <div class="directions__direction-text">
-                <h2 class="directions__direction-heading">Ревматология</h2>
-                <p class="directions__direction-description">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.
-                </p>
+            <div class="researches-hidden__list-block">
+              <h2 class="researches-hidden__list-heading">Категории</h2>
+              <div class="mode-switches mode-switches--researches-disease">
+                <input class="researches-hidden__disease-switches mode-switches__radio visually-hidden-input" id="allDisease" type="radio" name="mode-switches-disease" checked value="allDisease">
+                <label class="mode-switches__mode-label" for="allDisease">
+                  Все
+                </label>
+                <input class="mode-switches__radio visually-hidden-input" id="melanomaOne" type="radio" name="mode-switches-disease" value="melanomaOne">
+                <label class="mode-switches__mode-label" for="melanomaOne">
+                  Меланома
+                </label>
+                <input class="mode-switches__radio visually-hidden-input" id="melanomaTwo" type="radio" name="mode-switches-disease" value="melanomaTwo">
+                <label class="mode-switches__mode-label" for="melanomaTwo">
+                  Меланома
+                </label>
               </div>
-            </div>
-            <div class="directions__direction">
-              <a class="directions__direction-link" href="#">
-                <img class="directions__direction-img" src="img/placeholder-330x260.png" alt="">
-              </a>
-              <div class="directions__direction-text">
-                <h2 class="directions__direction-heading">Терапия</h2>
-                <p class="directions__direction-description">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="gallery gallery--doctors section section--grey">
-      <div class="container">
-        <div class="gallery__wrapper gallery__wrapper--doctors">
-          <div class="gallery__controls-wrapper gallery__controls-wrapper--doctors">
-            <h2 class="gallery__heading gallery__heading--desktop gallery__heading--doctors section__heading">Наши сотрудники</h2>
-            <p class="gallery__description gallery__description--doctors">
-              Краткая информация о специалистах работающих в нашей клинике
-            </p>
-            <a class="gallery__btn gallery__btn--doctors btn" href="#">
-              Посмотреть всех
-            </a>
-            <div class="mode-switches mode-switches--doctors">
-              <input class="mode-switches__radio visually-hidden-input" id="headPhotos" type="radio" name="doctor-switches" checked value="headPhotos">
-              <label class="mode-switches__mode-label" for="headPhotos">
-                Руководители и ведущие сотрудники
-              </label>
-              <input class="mode-switches__radio visually-hidden-input" id="docPhotos" type="radio" name="doctor-switches" value="docPhotos">
-              <label class="mode-switches__mode-label" for="docPhotos">
-                Ведущие врачи
-              </label>
-              <input class="mode-switches__radio visually-hidden-input" id="staffPhotos" type="radio" name="doctor-switches" value="staffPhotos">
-              <label class="mode-switches__mode-label" for="staffPhotos">
-                Медицинский персонал
-              </label>
-            </div>
-            <div class="gallery__pagination gallery__pagination--doctors">
-              <div class="gallery__arrows">
-                <button class="gallery__arrow gallery__arrow--prev btn btn--arrow btn--arrow-prev" type="button"></button>
-                <button class="gallery__arrow gallery__arrow--next btn btn--arrow btn--arrow-next" type="button"></button>
-              </div>
-              <p class="gallery__pagination-counter">
-                <span class="gallery__pagination-current">1</span>
-                из 12
-              </p>
-            </div>
-          </div>
-          <div class="gallery__slides-wrapper gallery__slides-wrapper--doctors">
-            <h2 class="gallery__heading gallery__heading--mobile section__heading">Наши сотрудники</h2>
-            <div class="gallery__slider">
-              <div class="gallery__slide gallery__slide--doctors">
-                <div class="gallery__slide-content-info">
-                  <div class="gallery__slide-content-text">
-                    <div class="gallery__slide-content-head">
-                      <h3 class="gallery__doctor-name">Фамилия Имя Отчество</h3>
-                      <span class="gallery__doctor-position">должность</span>
-                    </div>
-                    <div class="gallery__slide-content-body">
-                      <h4 class="gallery__doctor-schedule">График работы и часы приема:</h4>
-                      <p class="gallery__doctor-workhours">
-                        Пн-Ср: с 12:00 до 18:00<br>
-                        По субботам: с 10:00 до 16:00
-                      </p>
-                      <a class="gallery__doctor-appoint-btn btn" href="#">Записаться</a>
+              <div class="researches-hidden__list">
+                <div class="researches-hidden__item single-research">
+                  <div class="single-research__item-head">
+                    <h3 class="single-research__item-name">Нерезектабельная или метастатическая меланома</h3>
+                    <p class="single-research__item-status single-research__item-status--active">Статус: <span class="single-research__status-colored">набор возобновлен</span></p>
+                  </div>
+                  <div class="single-research__item-body">
+                    <span class="single-research__item-code">BCD-100-2/MIRACULUM</span>
+                    <p class="single-research__item-preview">
+                      Международное многоцентровое открытое рандомизированное исследование эффективности, фармакокинетических свойств, безопасности и иммуногенности препарата BCD-100 (ЗАО «БИОКАД», Россия) в монотерапии у пациентов с нерезектабельной или метастатической меланомой.
+                    </p>
+                    <div class="single-research__item-buttons">
+                      <a class="single-research__item-btn single-research__item-btn--apply btn" href="#">Подать заявку</a>
+                      <a class="single-research__item-btn single-research__item-btn--details btn btn--alternative" href="#">Подробнее</a>
                     </div>
                   </div>
                 </div>
-                <img class="gallery__slide-content-photo" src="img/doctor-big.png" alt="">
-              </div>
-              <div class="gallery__slide gallery__slide--doctors">
-                <div class="gallery__slide-content-info">
-                  <div class="gallery__slide-content-text">
-                    <div class="gallery__slide-content-head">
-                      <h3 class="gallery__doctor-name">Фамилия Имя Отчество</h3>
-                      <span class="gallery__doctor-position">должность</span>
-                    </div>
-                    <div class="gallery__slide-content-body">
-                      <h4 class="gallery__doctor-schedule">График работы и часы приема:</h4>
-                      <p class="gallery__doctor-workhours">
-                        Пн-Ср: с 12:00 до 18:00<br>
-                        По субботам: с 10:00 до 16:00
-                      </p>
-                      <a class="gallery__doctor-appoint-btn btn" href="#">Записаться</a>
+                <div class="researches-hidden__item single-research">
+                  <div class="single-research__item-head">
+                    <h3 class="single-research__item-name">Ревматоидный артрит</h3>
+                    <p class="single-research__item-status single-research__item-status--pending">Статус: <span class="single-research__status-colored">начало набора в октябре 2019</span></p>
+                  </div>
+                  <div class="single-research__item-body">
+                    <span class="single-research__item-code">BCD-132-3</span>
+                    <p class="single-research__item-preview">
+                      Международное многоцентровое рандомизированное двойное слепое плацебо-контролируемое клиническое исследование эффективности и безопасности препарата BCD-132 (ЗАО «БИОКАД», Россия) (II фаза) в разных режимах дозирования у больных активным ревматоидным артритом с неадекватным ответом на предшествующую терапию.
+                    </p>
+                    <div class="single-research__item-buttons">
+                      <a class="single-research__item-btn single-research__item-btn--apply btn" href="#">Подать заявку</a>
+                      <a class="single-research__item-btn single-research__item-btn--details btn btn--alternative" href="#">Подробнее</a>
                     </div>
                   </div>
                 </div>
-                <img class="gallery__slide-content-photo" src="img/doctor-big.png" alt="">
+                <div class="single-research__list-navigation nav-block nav-block--research">
+                  <div class="nav-block__navigation-arrows nav-block__navigation-arrows--research">
+                    <button class="nav-block__navigation-arrow nav-block__navigation-arrow--prev btn btn--arrow btn--arrow-prev" type="button"></button>
+                    <button class="nav-block__navigation-arrow nav-block__navigation-arrow--next btn btn--arrow btn--arrow-next" type="button"></button>
+                  </div>
+                  <a class="nav-block__navigation-all nav-block__navigation-all--research btn" href="#">
+                    Все клинические исследования
+                  </a>
+                </div>
               </div>
-            </ul>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="inner-directions inner-directions--about section">
-      <h2 class="visually-hidden">Ссылки на внутренние страницы раздела</h2>
-      <div class="container">
-        <div class="inner-directions__wrapper">
-          <a class="inner-directions__direction-link" href="#" style="background-image: url('img/icon-structure-hospital.svg')">
-            <div class="inner-directions__direction">
-              <h3 class="inner-directions__direction-name">Краткая информация о клинике</h3>
-            </div>
-          </a>
-          <a class="inner-directions__direction-link" href="#" style="background-image: url('img/icon-menu-documents.svg')">
-            <div class="inner-directions__direction">
-              <h3 class="inner-directions__direction-name">Лицензии и документы</h3>
-            </div>
-          </a>
-          <a class="inner-directions__direction-link" href="#" style="background-image: url('img/icon-menu-partnership.svg')">
-            <div class="inner-directions__direction">
-              <h3 class="inner-directions__direction-name">Сотрудничество с нами</h3>
-            </div>
-          </a>
-          <a class="inner-directions__direction-link" href="#" style="background-image: url('img/icon-menu-vacancies.svg')">
-            <div class="inner-directions__direction">
-              <h3 class="inner-directions__direction-name">Наши вакансии</h3>
-            </div>
-          </a>
-          <a class="inner-directions__direction-link" href="#" style="background-image: url('img/icon-menu-reviews.svg')">
-            <div class="inner-directions__direction">
-              <h3 class="inner-directions__direction-name">Отзывы о клинике</h3>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </main>
   <footer class="footer">
     <div class="footer__top-row">

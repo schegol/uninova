@@ -1,0 +1,124 @@
+.single-research__item-name {
+  @include reset;
+  max-width: 500px;
+  margin-bottom: 15px;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+}
+
+.single-research__item-head {
+  margin-bottom: 25px;
+  border-bottom: 1px solid #efefff;
+}
+
+.single-research__item-status {
+  @include reset;
+  position: relative;
+  margin-bottom: 30px;
+  padding-left: 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 30px;
+
+  &::before {
+    @include abs-pseudo;
+    top: 50%;
+    left: 0;
+    width: 35px;
+    height: 28px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateY(-50%);
+  }
+
+  &--active {
+    &::before {
+      background-image: url("../img/icon-status-started.svg");
+    }
+
+    & .single-research__status-colored {
+      color: $accent-color;
+    }
+  }
+
+  &--pending {
+    &::before {
+      background-image: url("../img/icon-status-pending.svg");
+    }
+
+    & .single-research__status-colored {
+      color: #9D85E8;
+    }
+  }
+}
+
+.single-research__item-code {
+  display: block;
+  margin-bottom: 23px;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.single-research__item-preview {
+  @include reset;
+  margin-bottom: 40px;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.single-research__item-buttons {
+  @include dflex(nowrap, row, flex-start, flex-start);
+}
+
+.single-research__item-btn {
+  &--apply {
+    min-width: 140px;
+    margin-right: 10px;
+  }
+
+  &--details {
+    min-width: 130px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .single-research__item-code {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .single-research__item-preview {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .single-research__item-name {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .single-research__item-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: $xs-mobile-width) {
+  .single-research__item-name {
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  .single-research__item-status {
+    margin-bottom: 20px;
+    line-height: 22px;
+  }
+
+  .single-research__item-head {
+    margin-bottom: 20px;
+  }
+}

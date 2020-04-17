@@ -1,6 +1,10 @@
 .nav-block {
   @include dflex(nowrap, row, flex-start, flex-start);
-  max-width: 330px;
+  width: 330px;
+
+  &--research {
+    width: 410px;
+  }
 }
 
 .nav-block__news-navigation {
@@ -9,12 +13,20 @@
 
 .nav-block__navigation-arrows {
   @include dflex(nowrap, row, space-between, flex-start);
-  width: 100px;
+  min-width: 100px;
   margin-right: 60px;
+
+  &--research {
+    margin-right: 40px;
+  }
 }
 
 .nav-block__navigation-all {
-  width: 170px;
+  min-width: 170px;
+
+  &--research {
+    min-width: 280px;
+  }
 }
 
 @media (max-width: $tablet-width) {

@@ -1,14 +1,20 @@
 .about-clinic__content {
-  @include dflex(nowrap, row, space-between, flex-start);
+  @include dflex(nowrap, row, flex-start, flex-start);
+  margin-right: -45px;
+  margin-left: -45px;
 }
 
 .about-clinic__speciality {
   @include dflex(nowrap, column, flex-start, flex-start);
   flex-basis: 330px;
+  margin-right: 45px;
+  margin-left: 45px;
 }
 
 .about-clinic__speciality-img {
   display: block;
+  width: 100%;
+  height: auto;
   margin-bottom: 30px;
 }
 
@@ -52,12 +58,19 @@
 }
 
 @media (max-width: $notebook-width) {
+  .about-clinic__content {
+    margin-right: -30px;
+    margin-left: -30px;
+  }
+
   .about-clinic__speciality {
-    flex-basis: 300px;
+    flex-basis: calc(33.3333% - 60px);
+    margin-right: 30px;
+    margin-left: 30px;
   }
 
   .about-clinic__speciality-img {
-    width: 300px;
+    // width: 300px;
     object-fit: cover;
   }
 
@@ -73,12 +86,20 @@
 }
 
 @media (max-width: $tablet-width) {
+  .about-clinic__content {
+    margin-right: -20px;
+    margin-left: -20px;
+  }
+
   .about-clinic__speciality {
-    flex-basis: 235px;
+    // flex-basis: 235px;
+    flex-basis: calc(33.3333% - 40px);
+    margin-right: 20px;
+    margin-left: 20px;
   }
 
   .about-clinic__speciality-img {
-    width: 235px;
+    // width: 235px;
     margin-bottom: 25px;
   }
 

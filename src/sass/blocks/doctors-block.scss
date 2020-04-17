@@ -1,0 +1,172 @@
+.doctors-block__list {
+  @include dflex(nowrap, row, flex-start, flex-start);
+  margin: 0 -50px 30px;
+}
+
+.doctors-block__item {
+  @include dflex(nowrap, column, flex-start, stretch);
+  width: 330px !important;
+  margin-right: 50px;
+  margin-left: 50px;
+  padding: 40px 25px 30px;
+  background-color: #fff;
+}
+
+.doctors-block__item-head {
+  @include dflex(nowrap, column, flex-start, center);
+  position: relative;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+
+  &::after {
+    @include abs-pseudo;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      #EFEFFF 0,
+      #EFEFFF 45%,
+      $accent-color 45%,
+      $accent-color 55%,
+      #EFEFFF 55%,
+      #EFEFFF 100%
+    );
+  }
+}
+
+.doctors-block__doctor-photo {
+  display: block;
+  width: 130px;
+  height: 130px;
+  margin-bottom: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.doctors-block__doctor-name {
+  @include reset;
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.doctors-block__doctor-position {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.doctors-block__item-body {
+  @include dflex(nowrap, column, flex-start, center);
+  position: relative;
+
+  &::before {
+    @include abs-pseudo;
+    top: -40px;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: #f9f9f9;
+    background-image: url("../img/icon-doctor-clock.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 22px;
+    border-radius: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.doctors-block__doctor-schedule {
+  @include reset;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.doctors-block__doctor-workhours {
+  @include reset;
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.doctors-block__buttons {
+  @include dflex(nowrap, row, space-between, flex-start);
+  width: 100%;
+}
+
+.doctors-block__btn {
+  flex-basis: 130px;
+
+  &:first-child {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: $notebook-width) {
+  .doctors-block__list {
+    margin-right: -30px;
+    margin-left: -30px;
+  }
+
+  .doctors-block__item {
+    // width: calc(33.3333% - 60px) !important;
+    width: auto !important;
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .doctors-block__list {
+    margin-right: -20px;
+    margin-left: -20px;
+  }
+
+  .doctors-block__item {
+    // width: calc(33.3333% - 40px) !important;
+    width: 100% !important;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .doctors-block__doctor-photo {
+    width: 110px;
+    height: 110px;
+  }
+
+  .doctors-block__doctor-name {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .doctors-block__doctor-position {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .doctors-block__doctor-workhours {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .doctors-block__buttons {
+    flex-direction: column;
+  }
+
+  .doctors-block__btn {
+    flex-basis: auto;
+    width: 100%;
+
+    &:first-child {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+}
