@@ -1,0 +1,537 @@
+.static-content__h2 {
+  @include reset;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.static-content__h3 {
+  @include reset;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: bold;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.static-content__h4 {
+  @include reset;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.static-content__p {
+  @include reset;
+  margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 22px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  & b {
+    font-weight: 500;
+  }
+}
+
+.static-content__p-accent1 {
+  @include reset;
+  margin-bottom: 40px;
+  padding: 30px;
+  font-size: 18px;
+  line-height: 22px;
+  background-color: #fbfbff;
+  border-radius: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  & b {
+    font-weight: 500;
+  }
+}
+
+.static-content__p-accent2 {
+  @include reset;
+  position: relative;
+  display: inline-block;
+  margin-top: 15px;
+  margin-bottom: 40px;
+  padding: 15px 30px 30px;
+  font-size: 18px;
+  line-height: 22px;
+  background-color: #e3defc;
+  border-radius: 0 0 10px 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    @include abs-pseudo;
+    top: -15px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background-image: url("../img/bg-text-highlight.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 15px;
+  }
+
+  & b {
+    font-weight: 500;
+  }
+}
+
+.static-content__ol-type1 {
+  @include list-reset;
+  margin-bottom: 40px;
+  list-style-type: none;
+  counter-reset: num;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  & > li {
+    font-size: 18px;
+    line-height: 22px;
+
+    &::before {
+      padding-right: 15px;
+      font-weight: 500;
+      content: counter(num) ')';
+      counter-increment: num;
+    }
+  }
+}
+
+.static-content__ol-type2 {
+  @include list-reset;
+  margin-bottom: 40px;
+  list-style-type: none;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  & > li {
+    padding-left: 30px;
+    font-size: 18px;
+    line-height: 22px;
+
+    &::before {
+      font-weight: 500;
+    }
+
+    &:nth-child(1)::before {
+      content: "а. ";
+    }
+
+    &:nth-child(2)::before {
+      content: "б. ";
+    }
+
+    &:nth-child(3)::before {
+      content: "в. ";
+    }
+
+    &:nth-child(4)::before {
+      content: "г. ";
+    }
+
+    &:nth-child(5)::before {
+      content: "д. ";
+    }
+
+    &:nth-child(6)::before {
+      content: "е. ";
+    }
+
+    &:nth-child(7)::before {
+      content: "ж. ";
+    }
+
+    &:nth-child(8)::before {
+      content: "з. ";
+    }
+
+    &:nth-child(9)::before {
+      content: "и. ";
+    }
+
+    &:nth-child(10)::before {
+      content: "к. ";
+    }
+
+    &:nth-child(11)::before {
+      content: "л. ";
+    }
+
+    &:nth-child(12)::before {
+      content: "м. ";
+    }
+
+    &:nth-child(13)::before {
+      content: "н. ";
+    }
+
+    &:nth-child(14)::before {
+      content: "о. ";
+    }
+
+    &:nth-child(15)::before {
+      content: "п. ";
+    }
+
+    &:nth-child(16)::before {
+      content: "р. ";
+    }
+
+    &:nth-child(17)::before {
+      content: "с. ";
+    }
+
+    &:nth-child(18)::before {
+      content: "т. ";
+    }
+
+    &:nth-child(19)::before {
+      content: "у. ";
+    }
+
+    &:nth-child(20)::before {
+      content: "ф. ";
+    }
+
+    &:nth-child(21)::before {
+      content: "х. ";
+    }
+
+    &:nth-child(22)::before {
+      content: "ц. ";
+    }
+
+    &:nth-child(23)::before {
+      content: "ч. ";
+    }
+
+    &:nth-child(24)::before {
+      content: "ш. ";
+    }
+
+    &:nth-child(25)::before {
+      content: "щ. ";
+    }
+
+    &:nth-child(26)::before {
+      content: "э. ";
+    }
+
+    &:nth-child(27)::before {
+      content: "ю. ";
+    }
+
+    &:nth-child(28)::before {
+      content: "я. ";
+    }
+  }
+}
+
+.static-content__ol-type3 {
+  @include list-reset;
+  margin-bottom: 40px;
+  list-style-type: none;
+  counter-reset: num;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  & > li {
+    font-size: 18px;
+    line-height: 22px;
+
+    &::before {
+      padding-right: 15px;
+      content: counter(num) ')';
+      counter-increment: num;
+    }
+  }
+}
+
+.static-content__ul-type1 {
+  @include list-reset;
+  margin-bottom: 40px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  & > li {
+    position: relative;
+    padding-left: 30px;
+    font-size: 18px;
+    line-height: 22px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &::before {
+      @include abs-pseudo;
+      top: 10px;
+      left: 0;
+      width: 3px;
+      height: 3px;
+      background-color: $accent-color;
+      border-radius: 50%;
+    }
+
+    & > ul {
+      @include list-reset;
+      margin-top: 20px;
+
+      & > li {
+        position: relative;
+        padding-left: 13px;
+
+        &::before {
+          @include abs-pseudo;
+          top: 13px;
+          left: 0;
+          width: 6px;
+          height: 1px;
+          background-color: $accent-color;
+        }
+      }
+    }
+  }
+}
+
+.static-content__ul-type2 {
+  @include list-reset;
+  margin-bottom: 40px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  & > li {
+    position: relative;
+    padding-left: 30px;
+    font-size: 18px;
+    line-height: 22px;
+
+    &::before {
+      @include abs-pseudo;
+      top: 10px;
+      left: 0;
+      width: 3px;
+      height: 3px;
+      background-color: $accent-color;
+      border-radius: 50%;
+    }
+  }
+}
+
+.static-content__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 40px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .static-content__h2 {
+    margin-bottom: 25px;
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  .static-content__h3 {
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .static-content__h4 {
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .static-content__p {
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .static-content__p-accent1 {
+    margin-bottom: 40px;
+    padding: 25px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .static-content__p-accent2 {
+    margin-bottom: 30px;
+    padding: 15px 25px 25px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .static-content__ol-type1 {
+    margin-bottom: 30px;
+
+    & > li {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  .static-content__ol-type2 {
+    margin-bottom: 30px;
+
+    & > li {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  .static-content__ol-type3 {
+    margin-bottom: 30px;
+
+    & > li {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  .static-content__ul-type1 {
+    margin-bottom: 30px;
+
+    & > li {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  .static-content__ul-type2 {
+    margin-bottom: 30px;
+
+    & > li {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  .static-content__img {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: $xs-mobile-width) {
+  .static-content__h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .static-content__h3 {
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 15px;
+  }
+
+  .static-content__h4 {
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 15px;
+  }
+
+  .static-content__p {
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+
+  .static-content__p-accent1 {
+    margin-bottom: 30px;
+    padding: 20px;
+    font-size: 15px;
+  }
+
+  .static-content__p-accent2 {
+    margin-bottom: 25px;
+    padding: 15px 20px 20px;
+    font-size: 15px;
+  }
+
+  .static-content__ol-type1 {
+    margin-bottom: 25px;
+
+    & > li {
+      font-size: 15px;
+    }
+  }
+
+  .static-content__ol-type2 {
+    margin-bottom: 25px;
+
+    & > li {
+      font-size: 15px;
+    }
+  }
+
+  .static-content__ol-type3 {
+    margin-bottom: 25px;
+
+    & > li {
+      font-size: 15px;
+    }
+  }
+
+  .static-content__ul-type1 {
+    margin-bottom: 25px;
+
+    & > li {
+      font-size: 15px;
+    }
+  }
+
+  .static-content__ul-type2 {
+    margin-bottom: 25px;
+
+    & > li {
+      font-size: 15px;
+    }
+  }
+
+  .static-content__img {
+    margin-bottom: 25px;
+  }
+}

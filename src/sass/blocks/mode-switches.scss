@@ -57,12 +57,14 @@
 }
 
 .mode-switches--researches-status .mode-switches__mode-label,
-.mode-switches--researches-disease .mode-switches__mode-label {
+.mode-switches--researches-disease .mode-switches__mode-label,
+.mode-switches--research-content .mode-switches__mode-label {
   color: #A2A6B7;
 }
 
 .mode-switches--researches-status .mode-switches__radio:checked + .mode-switches__mode-label,
-.mode-switches--researches-disease .mode-switches__radio:checked + .mode-switches__mode-label {
+.mode-switches--researches-disease .mode-switches__radio:checked + .mode-switches__mode-label,
+.mode-switches--research-content .mode-switches__radio:checked + .mode-switches__mode-label {
   color: $text-color;
 }
 
@@ -92,6 +94,12 @@
     &--researches-disease {
       flex-wrap: wrap;
       margin-bottom: 35px;
+    }
+  }
+
+  .mode-switches--research-content .mode-switches__mode-label {
+    &:not(:last-child) {
+      margin-bottom: 10px;
     }
   }
 }

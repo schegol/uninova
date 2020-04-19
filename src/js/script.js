@@ -33,6 +33,10 @@ $(document).ready(function() {
   const documentsHiddenInfoToggles = $('.banner-zone--about-documents .banner-zone__menu-link');
   //Скрытые разделы на странице "Лицензии и документы":
   const documentsHiddenInfo = $('.hidden-content--documents');
+  //ссылки на скрытые разделы на странице "Открытые исследования":
+  const researchesHiddenInfoToggles = $('.banner-zone--open-researches .banner-zone__menu-link');
+  //Скрытые разделы на странице "Открытые исследования":
+  const researchesHiddenInfo = $('.hidden-content--researches');
 
   //размеры видимого хедера и блока раскрытого основного меню
   var headerHeight = topHeader.outerHeight();
@@ -264,6 +268,39 @@ $(document).ready(function() {
             scrollTop: $('.hidden-content--documents.active').offset().top
         }, 300);
       }, 300);
+    });
+  });
+
+  //раскрытие разделов на стр. "Открытые исследования"
+  researchesHiddenInfoToggles.each(function () {
+    $(this).click(function (e) {
+      e.preventDefault();
+      var href = $(this).attr('href').replace('#', '');
+      researchesHiddenInfo.each(function () {
+        if ($(this).attr('id') == href) {
+          $(this).addClass('active');
+          $(this).slideDown(300);
+        } else {
+          $(this).removeClass('active');
+          $(this).slideUp(300);
+        };
+      });
+      setTimeout(function () {
+        $('html, body').animate({
+            scrollTop: $('.hidden-content--researches.active').offset().top
+        }, 300);
+      }, 300);
+    });
+  });
+
+  //кнопка разворачивания текста на странице "Исследование детально":
+  const researchTextToggle = $('.expandable-block__heading-toggle');
+
+  //раскрытие текстов на странице "Исследование детально"
+  researchTextToggle.each(function () {
+    $(this).click(function () {
+      $(this).parents('.expandable-block').toggleClass('expandable-block--open');
+      $(this).parents('.expandable-block__text-block-heading').next('.expandable-block__text-block-content').slideToggle(500);
     });
   });
 

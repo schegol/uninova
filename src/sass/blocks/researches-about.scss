@@ -1,0 +1,70 @@
+.researches-about__wrapper {
+  @include dflex(nowrap, row, flex-start, flex-start);
+}
+
+.researches-about__filter-block {
+  flex-basis: 405px;
+}
+
+.researches-about__filter-heading {
+  @include reset;
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.researches-about__list-block {
+  flex-basis: 765px;
+  padding-left: 75px;
+  border-left: 1px solid #EFEFFF;
+}
+
+@media (max-width: $notebook-width) {
+  .researches-about__filter-block {
+    flex-basis: 350px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .researches-about__filter-block {
+    flex-basis: 30%;
+  }
+
+  .researches-about__filter-heading {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .researches-about__list-block {
+    flex-basis: 70%;
+    padding-left: 30px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .researches-about__wrapper {
+    flex-direction: column;
+  }
+
+  .researches-about__filter-block {
+    flex-basis: auto;
+    width: 100%;
+    margin-bottom: 35px;
+  }
+
+  .researches-about__list-block {
+    flex-basis: auto;
+    width: 100%;
+    padding: 0;
+    border: none;
+  }
+}
+
+@media (max-width: $xs-mobile-width) {
+  .researches-about__filter-heading {
+    font-size: 15px;
+    line-height: 15px;
+  }
+}

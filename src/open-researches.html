@@ -219,23 +219,23 @@
         </div>
       </div>
     </section>
-    <div class="hidden-content hidden-content--researches hidden-content--researches-oncology" id="oncology">
+    <div class="hidden-content hidden-content--researches hidden-content--researches-oncology" id="oncology" style="display: none;">
       <section class="researches-hidden section">
         <div class="container">
           <div class="researches-hidden__wrapper">
             <div class="researches-hidden__filter-block">
               <h2 class="researches-hidden__filter-heading">Фильтрация</h2>
               <div class="researches-hidden__status-switches mode-switches mode-switches--researches-status">
-                <input class="mode-switches__radio visually-hidden-input" id="allStatuses" type="radio" name="mode-switches-status" checked value="allStatuses">
-                <label class="mode-switches__mode-label" for="allStatuses">
+                <input class="mode-switches__radio visually-hidden-input" id="allStatusesOncology" type="radio" name="status-oncology" checked value="allStatuses">
+                <label class="mode-switches__mode-label" for="allStatusesOncology">
                   Все
                 </label>
-                <input class="mode-switches__radio visually-hidden-input" id="open" type="radio" name="mode-switches-status" value="open">
-                <label class="mode-switches__mode-label" for="open">
+                <input class="mode-switches__radio visually-hidden-input" id="openOncology" type="radio" name="status-oncology" value="open">
+                <label class="mode-switches__mode-label" for="openOncology">
                   Идет набор
                 </label>
-                <input class="mode-switches__radio visually-hidden-input" id="closed" type="radio" name="mode-switches-status" value="closed">
-                <label class="mode-switches__mode-label" for="closed">
+                <input class="mode-switches__radio visually-hidden-input" id="closedOncology" type="radio" name="status-oncology" value="closed">
+                <label class="mode-switches__mode-label" for="closedOncology">
                   Ожидается набор
                 </label>
               </div>
@@ -243,16 +243,186 @@
             <div class="researches-hidden__list-block">
               <h2 class="researches-hidden__list-heading">Категории</h2>
               <div class="mode-switches mode-switches--researches-disease">
-                <input class="researches-hidden__disease-switches mode-switches__radio visually-hidden-input" id="allDisease" type="radio" name="mode-switches-disease" checked value="allDisease">
-                <label class="mode-switches__mode-label" for="allDisease">
+                <input class="researches-hidden__disease-switches mode-switches__radio visually-hidden-input" id="allDiseasesOncology" type="radio" name="disease-oncology" checked value="allDiseases">
+                <label class="mode-switches__mode-label" for="allDiseasesOncology">
                   Все
                 </label>
-                <input class="mode-switches__radio visually-hidden-input" id="melanomaOne" type="radio" name="mode-switches-disease" value="melanomaOne">
-                <label class="mode-switches__mode-label" for="melanomaOne">
+                <input class="mode-switches__radio visually-hidden-input" id="melanomaOneOncology" type="radio" name="disease-oncology" value="melanomaOne">
+                <label class="mode-switches__mode-label" for="melanomaOneOncology">
                   Меланома
                 </label>
-                <input class="mode-switches__radio visually-hidden-input" id="melanomaTwo" type="radio" name="mode-switches-disease" value="melanomaTwo">
-                <label class="mode-switches__mode-label" for="melanomaTwo">
+                <input class="mode-switches__radio visually-hidden-input" id="melanomaTwoOncology" type="radio" name="disease-oncology" value="melanomaTwo">
+                <label class="mode-switches__mode-label" for="melanomaTwoOncology">
+                  Меланома
+                </label>
+              </div>
+              <div class="researches-hidden__list">
+                <div class="researches-hidden__item single-research">
+                  <div class="single-research__item-head">
+                    <h3 class="single-research__item-name">Нерезектабельная или метастатическая меланома</h3>
+                    <p class="single-research__item-status single-research__item-status--active">Статус: <span class="single-research__status-colored">набор возобновлен</span></p>
+                  </div>
+                  <div class="single-research__item-body">
+                    <span class="single-research__item-code">BCD-100-2/MIRACULUM</span>
+                    <p class="single-research__item-preview">
+                      Международное многоцентровое открытое рандомизированное исследование эффективности, фармакокинетических свойств, безопасности и иммуногенности препарата BCD-100 (ЗАО «БИОКАД», Россия) в монотерапии у пациентов с нерезектабельной или метастатической меланомой.
+                    </p>
+                    <div class="single-research__item-buttons">
+                      <a class="single-research__item-btn single-research__item-btn--apply btn" href="#">Подать заявку</a>
+                      <a class="single-research__item-btn single-research__item-btn--details btn btn--alternative" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="researches-hidden__item single-research">
+                  <div class="single-research__item-head">
+                    <h3 class="single-research__item-name">Ревматоидный артрит</h3>
+                    <p class="single-research__item-status single-research__item-status--pending">Статус: <span class="single-research__status-colored">начало набора в октябре 2019</span></p>
+                  </div>
+                  <div class="single-research__item-body">
+                    <span class="single-research__item-code">BCD-132-3</span>
+                    <p class="single-research__item-preview">
+                      Международное многоцентровое рандомизированное двойное слепое плацебо-контролируемое клиническое исследование эффективности и безопасности препарата BCD-132 (ЗАО «БИОКАД», Россия) (II фаза) в разных режимах дозирования у больных активным ревматоидным артритом с неадекватным ответом на предшествующую терапию.
+                    </p>
+                    <div class="single-research__item-buttons">
+                      <a class="single-research__item-btn single-research__item-btn--apply btn" href="#">Подать заявку</a>
+                      <a class="single-research__item-btn single-research__item-btn--details btn btn--alternative" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="single-research__list-navigation nav-block nav-block--research">
+                  <div class="nav-block__navigation-arrows nav-block__navigation-arrows--research">
+                    <button class="nav-block__navigation-arrow nav-block__navigation-arrow--prev btn btn--arrow btn--arrow-prev" type="button"></button>
+                    <button class="nav-block__navigation-arrow nav-block__navigation-arrow--next btn btn--arrow btn--arrow-next" type="button"></button>
+                  </div>
+                  <a class="nav-block__navigation-all nav-block__navigation-all--research btn" href="#">
+                    Все клинические исследования
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="hidden-content hidden-content--researches hidden-content--researches-oncology" id="rheumatology" style="display: none;">
+      <section class="researches-hidden section">
+        <div class="container">
+          <div class="researches-hidden__wrapper">
+            <div class="researches-hidden__filter-block">
+              <h2 class="researches-hidden__filter-heading">Фильтрация</h2>
+              <div class="researches-hidden__status-switches mode-switches mode-switches--researches-status">
+                <input class="mode-switches__radio visually-hidden-input" id="allStatusesRheumatology" type="radio" name="status-rheumatology" checked value="allStatuses">
+                <label class="mode-switches__mode-label" for="allStatusesRheumatology">
+                  Все
+                </label>
+                <input class="mode-switches__radio visually-hidden-input" id="openRheumatology" type="radio" name="status-rheumatology" value="open">
+                <label class="mode-switches__mode-label" for="openRheumatology">
+                  Идет набор
+                </label>
+                <input class="mode-switches__radio visually-hidden-input" id="closedRheumatology" type="radio" name="status-rheumatology" value="closed">
+                <label class="mode-switches__mode-label" for="closedRheumatology">
+                  Ожидается набор
+                </label>
+              </div>
+            </div>
+            <div class="researches-hidden__list-block">
+              <h2 class="researches-hidden__list-heading">Категории</h2>
+              <div class="mode-switches mode-switches--researches-disease">
+                <input class="researches-hidden__disease-switches mode-switches__radio visually-hidden-input" id="allDiseasesRheumatology" type="radio" name="disease-rheumatology" checked value="allDiseases">
+                <label class="mode-switches__mode-label" for="allDiseasesRheumatology">
+                  Все
+                </label>
+                <input class="mode-switches__radio visually-hidden-input" id="melanomaOneRheumatology" type="radio" name="disease-rheumatology" value="melanomaOne">
+                <label class="mode-switches__mode-label" for="melanomaOneRheumatology">
+                  Меланома
+                </label>
+                <input class="mode-switches__radio visually-hidden-input" id="melanomaTwoRheumatology" type="radio" name="disease-rheumatology" value="melanomaTwo">
+                <label class="mode-switches__mode-label" for="melanomaTwoRheumatology">
+                  Меланома
+                </label>
+              </div>
+              <div class="researches-hidden__list">
+                <div class="researches-hidden__item single-research">
+                  <div class="single-research__item-head">
+                    <h3 class="single-research__item-name">Нерезектабельная или метастатическая меланома</h3>
+                    <p class="single-research__item-status single-research__item-status--active">Статус: <span class="single-research__status-colored">набор возобновлен</span></p>
+                  </div>
+                  <div class="single-research__item-body">
+                    <span class="single-research__item-code">BCD-100-2/MIRACULUM</span>
+                    <p class="single-research__item-preview">
+                      Международное многоцентровое открытое рандомизированное исследование эффективности, фармакокинетических свойств, безопасности и иммуногенности препарата BCD-100 (ЗАО «БИОКАД», Россия) в монотерапии у пациентов с нерезектабельной или метастатической меланомой.
+                    </p>
+                    <div class="single-research__item-buttons">
+                      <a class="single-research__item-btn single-research__item-btn--apply btn" href="#">Подать заявку</a>
+                      <a class="single-research__item-btn single-research__item-btn--details btn btn--alternative" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="researches-hidden__item single-research">
+                  <div class="single-research__item-head">
+                    <h3 class="single-research__item-name">Ревматоидный артрит</h3>
+                    <p class="single-research__item-status single-research__item-status--pending">Статус: <span class="single-research__status-colored">начало набора в октябре 2019</span></p>
+                  </div>
+                  <div class="single-research__item-body">
+                    <span class="single-research__item-code">BCD-132-3</span>
+                    <p class="single-research__item-preview">
+                      Международное многоцентровое рандомизированное двойное слепое плацебо-контролируемое клиническое исследование эффективности и безопасности препарата BCD-132 (ЗАО «БИОКАД», Россия) (II фаза) в разных режимах дозирования у больных активным ревматоидным артритом с неадекватным ответом на предшествующую терапию.
+                    </p>
+                    <div class="single-research__item-buttons">
+                      <a class="single-research__item-btn single-research__item-btn--apply btn" href="#">Подать заявку</a>
+                      <a class="single-research__item-btn single-research__item-btn--details btn btn--alternative" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="single-research__list-navigation nav-block nav-block--research">
+                  <div class="nav-block__navigation-arrows nav-block__navigation-arrows--research">
+                    <button class="nav-block__navigation-arrow nav-block__navigation-arrow--prev btn btn--arrow btn--arrow-prev" type="button"></button>
+                    <button class="nav-block__navigation-arrow nav-block__navigation-arrow--next btn btn--arrow btn--arrow-next" type="button"></button>
+                  </div>
+                  <a class="nav-block__navigation-all nav-block__navigation-all--research btn" href="#">
+                    Все клинические исследования
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="hidden-content hidden-content--researches hidden-content--researches-oncology" id="dermatology" style="display: none;">
+      <section class="researches-hidden section">
+        <div class="container">
+          <div class="researches-hidden__wrapper">
+            <div class="researches-hidden__filter-block">
+              <h2 class="researches-hidden__filter-heading">Фильтрация</h2>
+              <div class="researches-hidden__status-switches mode-switches mode-switches--researches-status">
+                <input class="mode-switches__radio visually-hidden-input" id="allStatusesDermatology" type="radio" name="status-dermatology" checked value="allStatuses">
+                <label class="mode-switches__mode-label" for="allStatusesDermatology">
+                  Все
+                </label>
+                <input class="mode-switches__radio visually-hidden-input" id="openDermatology" type="radio" name="status-dermatology" value="open">
+                <label class="mode-switches__mode-label" for="openDermatology">
+                  Идет набор
+                </label>
+                <input class="mode-switches__radio visually-hidden-input" id="closedDermatology" type="radio" name="status-dermatology" value="closed">
+                <label class="mode-switches__mode-label" for="closedDermatology">
+                  Ожидается набор
+                </label>
+              </div>
+            </div>
+            <div class="researches-hidden__list-block">
+              <h2 class="researches-hidden__list-heading">Категории</h2>
+              <div class="mode-switches mode-switches--researches-disease">
+                <input class="researches-hidden__disease-switches mode-switches__radio visually-hidden-input" id="allDiseasesDermatology" type="radio" name="disease-dermatology" checked value="allDiseases">
+                <label class="mode-switches__mode-label" for="allDiseasesDermatology">
+                  Все
+                </label>
+                <input class="mode-switches__radio visually-hidden-input" id="melanomaOneDermatology" type="radio" name="disease-dermatology" value="melanomaOne">
+                <label class="mode-switches__mode-label" for="melanomaOneDermatology">
+                  Меланома
+                </label>
+                <input class="mode-switches__radio visually-hidden-input" id="melanomaTwoDermatology" type="radio" name="disease-dermatology" value="melanomaTwo">
+                <label class="mode-switches__mode-label" for="melanomaTwoDermatology">
                   Меланома
                 </label>
               </div>

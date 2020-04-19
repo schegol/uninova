@@ -1,12 +1,12 @@
-.researches-hidden__wrapper {
+.research-conditions__wrapper {
   @include dflex(nowrap, row, flex-start, flex-start);
 }
 
-.researches-hidden__filter-block {
+.research-conditions__filter-block {
   flex-basis: 405px;
 }
 
-.researches-hidden__filter-heading {
+.research-conditions__filter-heading {
   @include reset;
   margin-bottom: 20px;
   font-size: 34px;
@@ -14,82 +14,65 @@
   font-weight: 500;
 }
 
-.researches-hidden__list-block {
+.research-conditions__list-block {
   flex-basis: 765px;
   padding-left: 75px;
   border-left: 1px solid #EFEFFF;
 }
 
-.researches-hidden__item {
-  margin-bottom: 50px;
-}
-
-.researches-hidden__list-heading {
-  @include reset;
-  margin-bottom: 20px;
-  font-size: 34px;
-  line-height: 34px;
-  font-weight: 500;
-}
-
 @media (max-width: $notebook-width) {
-  .researches-hidden__filter-block {
+  .research-conditions__filter-block {
     flex-basis: 350px;
   }
 }
 
 @media (max-width: $tablet-width) {
-  .researches-hidden__filter-block {
+  .research-conditions__filter-block {
     flex-basis: 30%;
   }
 
-  .researches-hidden__filter-heading {
+  .research-conditions__filter-heading {
     font-size: 30px;
     line-height: 30px;
   }
 
-  .researches-hidden__list-heading {
+  .research-conditions__list-heading {
     font-size: 30px;
     line-height: 30px;
   }
 
-  .researches-hidden__list-block {
+  .research-conditions__list-block {
     flex-basis: 70%;
     padding-left: 30px;
   }
 }
 
 @media (max-width: $mobile-width) {
-  .researches-hidden__wrapper {
+  .research-conditions__wrapper {
     flex-direction: column;
   }
 
-  .researches-hidden__filter-block {
+  .research-conditions__filter-block {
     flex-basis: auto;
     width: 100%;
+    margin-bottom: 35px;
   }
 
-  .researches-hidden__list-block {
+  .research-conditions__list-block {
     flex-basis: auto;
     width: 100%;
-    padding-left: 0;
+    padding: 0;
     border: none;
   }
 
-  .researches-hidden__filter-heading {
-    font-size: 26px;
-    line-height: 26px;
-  }
-
-  .researches-hidden__list-heading {
+  .research-conditions__filter-heading {
     font-size: 26px;
     line-height: 26px;
   }
 }
 
 @media (max-width: $xs-mobile-width) {
-  .researches-hidden__filter-heading,
-  .researches-hidden__list-heading {
+  .research-conditions__filter-heading {
     font-size: 22px;
     line-height: 22px;
   }
