@@ -206,34 +206,34 @@
     <section class="researches-about section">
       <div class="container">
         <div class="researches-about__wrapper">
-          <div class="researches-about__filter-block">
+          <div class="researches-about__filter-block filter-block">
             <h2 class="researches-about__filter-heading">Оглавление</h2>
-            <div class="researches-about__content-switches mode-switches mode-switches--researches-about">
-              <input class="mode-switches__radio visually-hidden-input" id="block-1" type="radio" name="custom-content-parts" checked value="block-1">
+            <div class="researches-about__content-switches mode-switches mode-switches--chapters mode-switches--researches-about">
+              <input class="mode-switches__radio visually-hidden-input" id="block-1" type="radio" name="custom-content-parts" checked value="block-1" data-chapter="1">
               <label class="mode-switches__mode-label" for="block-1">
-                Клинические проявления
+                Оглавление 1
               </label>
-              <input class="mode-switches__radio visually-hidden-input" id="block-2" type="radio" name="custom-content-parts" value="block-2">
+              <input class="mode-switches__radio visually-hidden-input" id="block-2" type="radio" name="custom-content-parts" value="block-2" data-chapter="2">
               <label class="mode-switches__mode-label" for="block-2">
-                Диагностика
+                Оглавление 2
               </label>
-              <input class="mode-switches__radio visually-hidden-input" id="block-3" type="radio" name="custom-content-parts" value="block-3">
+              <input class="mode-switches__radio visually-hidden-input" id="block-3" type="radio" name="custom-content-parts" value="block-3" data-chapter="3">
               <label class="mode-switches__mode-label" for="block-3">
-                Лечение
+                Оглавление 3
               </label>
-              <input class="mode-switches__radio visually-hidden-input" id="block-4" type="radio" name="custom-content-parts" value="block-4">
+              <input class="mode-switches__radio visually-hidden-input" id="block-4" type="radio" name="custom-content-parts" value="block-4" data-chapter="4">
               <label class="mode-switches__mode-label" for="block-4">
-                Симптомы
+                Оглавление 4
               </label>
-              <input class="mode-switches__radio visually-hidden-input" id="block-5" type="radio" name="custom-content-parts" value="block-5">
+              <input class="mode-switches__radio visually-hidden-input" id="block-5" type="radio" name="custom-content-parts" value="block-5" data-chapter="5">
               <label class="mode-switches__mode-label" for="block-5">
-                Источники
+                Оглавление 5
               </label>
             </div>
           </div>
-          <div class="researches-about__list-block">
+          <div class="researches-about__list-block list-block">
             <div class="researches-about__list static-content">
-              <div class="researches-about__item expandable-block expandable-block--researches-about expandable-block--open">
+              <div class="researches-about__item expandable-block expandable-block--researches-about" data-chapter="1">
                 <div class="expandable-block__text-block-heading">
                   <h2 class="expandable-block__heading-text static-content__h2">H2 Заголовок</h2>
                   <button class="expandable-block__heading-toggle">
@@ -241,13 +241,13 @@
                     <span class="expandable-block__heading-toggle-span expandable-block__heading-toggle-span--show">Развернуть</span>
                   </button>
                 </div>
-                <div class="expandable-block__text-block-content">
+                <div class="expandable-block__text-block-content" style="display: none;">
                   <p class="static-content__p">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.
                   </p>
                 </div>
               </div>
-              <div class="researches-about__item expandable-block expandable-block--researches-about expandable-block--open">
+              <div class="researches-about__item expandable-block expandable-block--researches-about" data-chapter="2">
                 <div class="expandable-block__text-block-heading">
                   <h3 class="expandable-block__heading-text static-content__h3">H3 Заголовок</h3>
                   <button class="expandable-block__heading-toggle">
@@ -255,7 +255,7 @@
                     <span class="expandable-block__heading-toggle-span expandable-block__heading-toggle-span--show">Развернуть</span>
                   </button>
                 </div>
-                <div class="expandable-block__text-block-content">
+                <div class="expandable-block__text-block-content" style="display: none;">
                   <p class="static-content__p">
                     К основным факторам риска развития рака легких относятся:
                   </p>
@@ -296,7 +296,7 @@
                   <img class="static-content__img" src="img/placeholder-690x380.png" alt="">
                 </div>
               </div>
-              <div class="researches-about__item expandable-block expandable-block--researches-about expandable-block--open">
+              <div class="researches-about__item expandable-block expandable-block--researches-about" data-chapter="3">
                 <div class="expandable-block__text-block-heading">
                   <h3 class="expandable-block__heading-text static-content__h3">H3 Клинические проявления</h3>
                   <button class="expandable-block__heading-toggle">
@@ -304,7 +304,7 @@
                     <span class="expandable-block__heading-toggle-span expandable-block__heading-toggle-span--show">Развернуть</span>
                   </button>
                 </div>
-                <div class="expandable-block__text-block-content">
+                <div class="expandable-block__text-block-content" style="display: none;">
                   <h4 class="static-content__h4">H4 Симптомы рака легких</h4>
                   <ul class="static-content__ul-type1">
                     <li>
@@ -343,7 +343,7 @@
                   </p>
                 </div>
               </div>
-              <div class="researches-about__item expandable-block expandable-block--researches-about expandable-block--open">
+              <div class="researches-about__item expandable-block expandable-block--researches-about" data-chapter="4">
                 <div class="expandable-block__text-block-heading">
                   <h3 class="expandable-block__heading-text static-content__h3">H3 Клинические проявления</h3>
                   <button class="expandable-block__heading-toggle">
@@ -351,7 +351,7 @@
                     <span class="expandable-block__heading-toggle-span expandable-block__heading-toggle-span--show">Развернуть</span>
                   </button>
                 </div>
-                <div class="expandable-block__text-block-content">
+                <div class="expandable-block__text-block-content" style="display: none;">
                   <h3 class="static-content__h3">H2 Источники</h3>
                   <ol class="static-content__ol-type3">
                     <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
@@ -364,6 +364,20 @@
                     <li>Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet.</li>
                     <li>Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.</li>
                   </ol>
+                </div>
+              </div>
+              <div class="researches-about__item expandable-block expandable-block--researches-about" data-chapter="5">
+                <div class="expandable-block__text-block-heading">
+                  <h2 class="expandable-block__heading-text static-content__h2">Оглавление 5</h2>
+                  <button class="expandable-block__heading-toggle">
+                    <span class="expandable-block__heading-toggle-span expandable-block__heading-toggle-span--hide">Свернуть</span>
+                    <span class="expandable-block__heading-toggle-span expandable-block__heading-toggle-span--show">Развернуть</span>
+                  </button>
+                </div>
+                <div class="expandable-block__text-block-content" style="display: none;">
+                  <p class="static-content__p">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.
+                  </p>
                 </div>
               </div>
             </div>

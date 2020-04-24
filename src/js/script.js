@@ -37,6 +37,8 @@ $(document).ready(function() {
   const researchesHiddenInfoToggles = $('.banner-zone--open-researches .banner-zone__menu-link');
   //Скрытые разделы на странице "Открытые исследования":
   const researchesHiddenInfo = $('.hidden-content--researches');
+  //Радио-переключатели, предназначенные для открытия свернутого контента:
+  const chapterModeSwitches = $('.mode-switches--chapters input[type=radio]');
 
   //размеры видимого хедера и блока раскрытого основного меню
   var headerHeight = topHeader.outerHeight();
@@ -249,49 +251,32 @@ $(document).ready(function() {
     ]
   });
 
-  //раскрытие скрытой информации на стр. "Лицензии и документы"
-  documentsHiddenInfoToggles.each(function () {
-    $(this).click(function (e) {
-      e.preventDefault();
-      var href = $(this).attr('href').replace('#', '');
-      documentsHiddenInfo.each(function () {
-        if ($(this).attr('id') == href) {
-          $(this).addClass('active');
-          $(this).slideDown(300);
-        } else {
-          $(this).removeClass('active');
-          $(this).slideUp(300);
-        };
-      });
-      setTimeout(function () {
-        $('html, body').animate({
-            scrollTop: $('.hidden-content--documents.active').offset().top
+  //функция ракрытия скрытых областей через меню в зоне с баннером:
+  var openWithBannerZoneMenu = function (arg) {
+    arg.each(function () {
+      $(this).click(function (e) {
+        e.preventDefault();
+        var href = $(this).attr('href').replace('#', '');
+        documentsHiddenInfo.each(function () {
+          if ($(this).attr('id') == href) {
+            $(this).addClass('active');
+            $(this).slideDown(300);
+          } else {
+            $(this).removeClass('active');
+            $(this).slideUp(300);
+          };
+        });
+        setTimeout(function () {
+          $('html, body').animate({
+              scrollTop: $('.hidden-content--documents.active').offset().top
+          }, 300);
         }, 300);
-      }, 300);
+      });
     });
-  });
+  };
 
-  //раскрытие разделов на стр. "Открытые исследования"
-  researchesHiddenInfoToggles.each(function () {
-    $(this).click(function (e) {
-      e.preventDefault();
-      var href = $(this).attr('href').replace('#', '');
-      researchesHiddenInfo.each(function () {
-        if ($(this).attr('id') == href) {
-          $(this).addClass('active');
-          $(this).slideDown(300);
-        } else {
-          $(this).removeClass('active');
-          $(this).slideUp(300);
-        };
-      });
-      setTimeout(function () {
-        $('html, body').animate({
-            scrollTop: $('.hidden-content--researches.active').offset().top
-        }, 300);
-      }, 300);
-    });
-  });
+  openWithBannerZoneMenu(documentsHiddenInfoToggles);
+  openWithBannerZoneMenu(researchesHiddenInfoToggles);
 
   //кнопка разворачивания текста на странице "Исследование детально":
   const researchTextToggle = $('.expandable-block__heading-toggle');
@@ -303,6 +288,37 @@ $(document).ready(function() {
       $(this).parents('.expandable-block__text-block-heading').next('.expandable-block__text-block-content').slideToggle(500);
     });
   });
+
+  //функции, связующие переключатели в оглавлениях и блоки со сворачиваемым контентом:
+  if (chapterModeSwitches.length) {
+    let chapters = chapterModeSwitches.parents('.filter-block').next('.list-block').find('.expandable-block');
+    let chapterId = $('.mode-switches--chapters input[type=radio]:checked').data('chapter');
+
+    chapters.each(function () {
+      if ($(this).attr('data-chapter') == chapterId) {
+        $(this).addClass('expandable-block--open').find('.expandable-block__text-block-content').css('display','block');
+      };
+    });
+
+    chapterModeSwitches.change(function () {
+      let chapterId = $('.mode-switches--chapters input[type=radio]:checked').data('chapter');
+
+      chapters.each(function () {
+        if ($(this).attr('data-chapter') == chapterId) {
+          if (!$(this).hasClass('expandable-block--open')) {
+            chapters.removeClass('expandable-block--open').find('.expandable-block__text-block-content').slideUp(300);
+            setTimeout(function () {
+              $('html, body').animate({
+                  scrollTop: $(this).offset().top
+              }, 300);
+            }, 300);
+            $(this).addClass('expandable-block--open').find('.expandable-block__text-block-content').slideDown(300);
+
+          };
+        };
+      });
+    });
+  };
 
   $(window).resize(function () {
     tableCellsWidth(tableHeading);
