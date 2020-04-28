@@ -281,11 +281,30 @@ $(document).ready(function() {
   //кнопка разворачивания текста на странице "Исследование детально":
   const researchTextToggle = $('.expandable-block__heading-toggle');
 
-  //раскрытие текстов на странице "Исследование детально"
+  //раскрытие текстов на страницах "Исследование детально" и "О клинических исследованиях"
   researchTextToggle.each(function () {
     $(this).click(function () {
       $(this).parents('.expandable-block').toggleClass('expandable-block--open');
       $(this).parents('.expandable-block__text-block-heading').next('.expandable-block__text-block-content').slideToggle(500);
+      if ($(this).parents('.expandable-block').data('chapter') !== undefined) {
+        let dataChapter = $(this).parents('.expandable-block').data('chapter');
+        let allBlocks = $(this).parents('.list-block').find('.expandable-block');
+        let thisBlock = $(this).parents('.expandable-block');
+        let allSwitchesBlock = $(this).parents('.section').find('.mode-switches');
+        let allSwitches = allSwitchesBlock.children('input');
+        let thisSwitch = allSwitchesBlock.children('[data-chapter='+dataChapter+']');
+
+        allSwitches.prop('checked', false);
+        thisSwitch.prop('checked', true);
+        if (thisBlock.hasClass('expandable-block--open')) {
+          allBlocks.not(thisBlock).removeClass('expandable-block--open').find('.expandable-block__text-block-content').slideUp(500);
+          setTimeout(function () {
+            $('html, body').animate({
+                scrollTop: thisBlock.offset().top
+            }, 300);
+          }, 300);
+        };
+      };
     });
   });
 
@@ -304,17 +323,17 @@ $(document).ready(function() {
       let chapterId = $('.mode-switches--chapters input[type=radio]:checked').data('chapter');
 
       chapters.each(function () {
+        let chapter = $(this);
         if ($(this).attr('data-chapter') == chapterId) {
           if (!$(this).hasClass('expandable-block--open')) {
             chapters.removeClass('expandable-block--open').find('.expandable-block__text-block-content').slideUp(300);
-            setTimeout(function () {
-              $('html, body').animate({
-                  scrollTop: $(this).offset().top
-              }, 300);
-            }, 300);
             $(this).addClass('expandable-block--open').find('.expandable-block__text-block-content').slideDown(300);
-
           };
+          setTimeout(function () {
+            $('html, body').animate({
+                scrollTop: chapter.offset().top
+            }, 300);
+          }, 300);
         };
       });
     });
