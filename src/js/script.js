@@ -121,6 +121,39 @@ $(document).ready(function() {
     });
   });
 
+  //модалки:
+  const modalOverlay = $('.modal');
+  const modalForm = $('.modal__form');
+  const modalToggle = $('.header__appointment-btn');
+  const modalCloseBtn = $('.modal__close-btn');
+
+  modalToggle.click(function (e) {
+    e.preventDefault();
+    modalOverlay.addClass('modal--open');
+    $('body').addClass('modal-open');
+  });
+
+  var closeModal = function () {
+    modalOverlay.removeClass('modal--open');
+    $('body').removeClass('modal-open');
+  };
+
+  modalCloseBtn.click(function () {
+    closeModal();
+  });
+
+  modalOverlay.click(function (e) {
+    if (!modalForm.is(e.target) && modalForm.has(e.target).length === 0) {
+      closeModal();
+    };
+  });
+
+  $(document).keydown(function(e) {
+    if (e.keyCode == 27) {
+        closeModal();
+    };
+  });
+
   //кнопка разворачивания прайс-листа с услугами:
   const priceListToggle = $('.services-prices__table-toggle');
 
@@ -256,21 +289,36 @@ $(document).ready(function() {
     arg.each(function () {
       $(this).click(function (e) {
         e.preventDefault();
-        var href = $(this).attr('href').replace('#', '');
-        documentsHiddenInfo.each(function () {
+        let href = $(this).attr('href').replace('#', '');
+        let hiddenContent = arg.parents('.main').find('.hidden-content');
+        let alreadyActive = false;
+
+        hiddenContent.each(function () {
           if ($(this).attr('id') == href) {
-            $(this).addClass('active');
-            $(this).slideDown(300);
+            if (!$(this).hasClass('active')) {
+              $(this).addClass('active');
+              $(this).slideDown(300);
+            } else {
+              alreadyActive = true;
+            };
           } else {
             $(this).removeClass('active');
             $(this).slideUp(300);
           };
         });
-        setTimeout(function () {
-          $('html, body').animate({
-              scrollTop: $('.hidden-content--documents.active').offset().top
+
+        if (alreadyActive === false) {
+          setTimeout(function () {
+            $('html, body').animate({
+                scrollTop: arg.parents('.main').find('.hidden-content.active').offset().top
+            }, 300);
+            alreadyActive = true;
           }, 300);
-        }, 300);
+        } else {
+          $('html, body').animate({
+              scrollTop: arg.parents('.main').find('.hidden-content.active').offset().top
+          }, 300);
+        };
       });
     });
   };

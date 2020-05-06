@@ -6,8 +6,9 @@
   background-repeat: no-repeat;
 
   &--index {
+    @include dflex(nowrap, row, center, center);
     height: 600px;
-    padding-top: 120px;
+    padding-top: 80px;
     padding-bottom: 80px;
 
     & .btn {

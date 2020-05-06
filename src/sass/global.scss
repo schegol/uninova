@@ -3,6 +3,8 @@ html, body{
 }
 
 body {
+  @include dflex(nowrap, column, flex-start, stretch);
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -12,6 +14,20 @@ body {
   font-family: "TT Norms", "Arial", sans-serif;
   color: $text-color;
   background-color: #fff;
+
+  &.modal-open {
+    overflow: hidden;
+  }
+}
+
+.header,
+.main {
+  flex-shrink: 0;
+}
+
+.footer {
+  flex-shrink: 0;
+  margin-top: auto;
 }
 
 *,
