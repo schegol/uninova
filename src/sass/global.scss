@@ -16,6 +16,7 @@ body {
   background-color: #fff;
 
   &.modal-open {
+    padding-right: 17px;
     overflow: hidden;
   }
 }
